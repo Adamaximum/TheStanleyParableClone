@@ -7,6 +7,9 @@ public class MouseLook : MonoBehaviour
     float verticalAngle = 0f; // store vertical look in a separate variable
     // so as to avoid eulerAngles wraparound from 180 to -180
     
+    void Start() {
+        Cursor.lockState = CursorLockMode.Locked; // locks cursor to center of screen (** NEEDED for Interaction Script **)
+    }
 
     // Update is called once per frame
     void Update()
@@ -18,7 +21,7 @@ public class MouseLook : MonoBehaviour
         transform.parent.Rotate(0f, mouseX * 10f, 0f); // rotate camera's parent (cube)
 
         verticalAngle -= mouseY * 10f;
-        verticalAngle = Mathf.Clamp(verticalAngle,-80f,80f);
+        verticalAngle = Mathf.Clamp(verticalAngle, -90f, 90f);
 
         // X = Pitch, Y = Yaw, Z = Roll
         transform.localEulerAngles = new Vector3(verticalAngle,
