@@ -29,7 +29,7 @@ public class EventTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.name == "Player" && !triggered)
+        if (other.gameObject.tag == "Player" && !triggered)
         {
             triggered = true; // Ensures this trigger won't start again
             manager.source.Stop(); // Stops current audio
@@ -47,13 +47,15 @@ public class EventTrigger : MonoBehaviour
 
             for (int i = 0; i < doors.Length; i++)
             {
-                if (doors[i].transform.eulerAngles.y == -90)
+                if (doors[i].GetComponent<DoorState>().doorOpen)
                 {
-                    doors[i].transform.eulerAngles = new Vector3(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+                    // Close the door
+                    doors[i].GetComponent<DoorState>().doorOpen = false;
                 }
                 else
                 {
-                    doors[i].transform.eulerAngles = new Vector3(transform.eulerAngles.x, -90, transform.eulerAngles.z);
+                    // Open the door
+                    doors[i].GetComponent<DoorState>().doorOpen = true;
                 }
             }
 
