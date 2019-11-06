@@ -5,6 +5,8 @@ using UnityEngine;
 public class DoorState : MonoBehaviour
 {
     public bool doorOpen;
+    public float openAngle;
+    public float closeAngle;
 
     // Start is called before the first frame update
     void Start()
@@ -17,11 +19,11 @@ public class DoorState : MonoBehaviour
     {
         if (doorOpen)
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, -90, transform.localEulerAngles.z);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, openAngle, transform.localEulerAngles.z);
         }
         else
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 0, transform.localEulerAngles.z);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, closeAngle, transform.localEulerAngles.z);
         }
     }
 }
