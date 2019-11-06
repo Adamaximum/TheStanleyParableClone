@@ -47,18 +47,8 @@ public class EventTrigger : MonoBehaviour
 
             for (int i = 0; i < doors.Length; i++)
             {
-                if (doors[i].GetComponent<DoorState>().doorOpen)
-                {
-                    // Close the door
-                    doors[i].GetComponent<DoorState>().doorOpen = false;
-                }
-                else
-                {
-                    // Open the door
-                    doors[i].GetComponent<DoorState>().doorOpen = true;
-                }
+                doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
             }
-
         }
     }
 }
