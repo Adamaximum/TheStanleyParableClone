@@ -8,29 +8,40 @@ public class PlayerMoveScript : MonoBehaviour
     Vector3 myInput;
     public float moveSpd;
 
-    // Start is called before the first frame update
+    private bool grounded = false;
+
     void Start()
     {
         myRb = GetComponent<Rigidbody>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         float horizontal = Input.GetAxis("Horizontal");
         float vertical = Input.GetAxis("Vertical");
-
-        // Translate does not account fro physics or collision
-        // transform.Translate()
 
         myInput = horizontal * transform.right;
         myInput += vertical * transform.forward;
     }
 
     void FixedUpdate(){
-        // AddForce adds thrust, this is good for spaceships / boats / cars
-        //myRb.AddForce(myInput * 15f);
-        
-        myRb.velocity = myInput * moveSpd;
+        if (grounded){
+            myRb.velocity = myInput * moveSpd;
+        }
+        else{
+            myRb.velocity = new Vector3(myInput.x * moveSpd, myRb.velocity.y, myInput.z * moveSpd);
+        }
+    }
+
+    private void OnCollisionEnter(Collision other) {
+        if (other.collider.tag == "ground"){
+            grounded = true;
+        }
+    }
+
+    private void OnCollisionExit(Collision other) {
+        if (other.collider.tag == "ground"){
+            grounded = false;
+        }
     }
 }
