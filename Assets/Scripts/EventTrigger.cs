@@ -24,6 +24,36 @@ public class EventTrigger : MonoBehaviour
         if (triggered)
         {
             manager.PlayVoice();
+            SpecialEventTriggers();
+        }
+    }
+
+    void SpecialEventTriggers()
+    {
+        if (gameObject.tag == "TriggerLounge")
+        {
+            doors[0].GetComponent<DoorState>().doorOpen = false;
+
+            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
+            {
+                doors[1].GetComponent<DoorState>().doorOpen = true;
+            }
+        }
+        if (gameObject.tag == "TriggerInsane")
+        {
+            doors[0].GetComponent<DoorState>().doorOpen = false;
+
+            if (manager.currentLine > 14)
+            {
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<DoorState>().doorOpen = false;
+                }
+            }
+            if (manager.currentLine > 20)
+            {
+                Camera.main.enabled = false;
+            }
         }
     }
 
@@ -32,33 +62,30 @@ public class EventTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player" && !triggered)
         {
             triggered = true; // Ensures this trigger won't start again
-            manager.source.Stop(); // Stops current audio
-            manager.currentLine = 0; // Resets current line
-            manager.subtitleTexts.Clear(); // Clears current set of subtitles
-            manager.voiceOverLines.Clear(); // Clears current set of lines
-            manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
-            manager.voiceOverLines.AddRange(voiceOverLines); // Adds new lines
 
-            if (manager.currentTrigger != null)
+            if (subtitleTexts.Length > 0 && voiceOverLines.Length > 0) // Only if there is dialogue
             {
-                Destroy(manager.currentTrigger); // Destroys the old trigger
-            }
-            manager.currentTrigger = this.gameObject; // Adds the new trigger
+                manager.source.Stop(); // Stops current audio
+                manager.currentLine = 0; // Resets current line
+                manager.subtitleTexts.Clear(); // Clears current set of subtitles
+                manager.voiceOverLines.Clear(); // Clears current set of lines
+                manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
+                manager.voiceOverLines.AddRange(voiceOverLines); // Adds new lines
 
-            for (int i = 0; i < doors.Length; i++)
-            {
-                if (doors[i].GetComponent<DoorState>().doorOpen)
+                if (manager.currentTrigger != null)
                 {
-                    // Close the door
-                    doors[i].GetComponent<DoorState>().doorOpen = false;
+                    Destroy(manager.currentTrigger); // Destroys the old trigger
                 }
-                else
-                {
-                    // Open the door
-                    doors[i].GetComponent<DoorState>().doorOpen = true;
-                }
+                manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
+            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRepeating")
+            {
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
+                }
+            }
         }
     }
 }
