@@ -9,6 +9,8 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI subtitles;
     public AudioSource source;
 
+    public Image panelGiant;
+
     public Image panelShort;
     public Image panelTall;
 
@@ -24,6 +26,8 @@ public class DialogueManager : MonoBehaviour
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
         source = GameObject.Find("Subtitles").GetComponent<AudioSource>();
 
+        panelGiant = GameObject.Find("PanelGiant").GetComponent<Image>();
+
         panelShort = GameObject.Find("PanelShort").GetComponent<Image>();
         panelTall = GameObject.Find("PanelTall").GetComponent<Image>();
 
@@ -36,6 +40,8 @@ public class DialogueManager : MonoBehaviour
         if (!source.isPlaying)
         {
             subtitles.text = "";
+            panelGiant.enabled = false;
+
             panelShort.enabled = false;
             panelTall.enabled = false;
         }
@@ -53,16 +59,18 @@ public class DialogueManager : MonoBehaviour
 
             currentLine++;
 
-            if (subtitles.isTextOverflowing)
-            {
-                panelTall.enabled = false;
-                panelShort.enabled = true;
-            }
-            else
-            {
-                panelTall.enabled = true;
-                panelShort.enabled = false;
-            }
+            panelGiant.enabled = true;
+
+            //if (subtitles.isTextOverflowing)
+            //{
+            //    panelTall.enabled = false;
+            //    panelShort.enabled = true;
+            //}
+            //else
+            //{
+            //    panelTall.enabled = true;
+            //    panelShort.enabled = false;
+            //}
         }
     }
 }
