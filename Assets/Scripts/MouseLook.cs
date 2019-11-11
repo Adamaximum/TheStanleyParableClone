@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    public float horizontalLookSpd = 0;
+    public float verticalLookSpd = 0;
+
     float verticalAngle = 0f; // store vertical look in a separate variable
     // so as to avoid eulerAngles wraparound from 180 to -180
     
@@ -14,16 +17,14 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // returns "0" if we aren't moving the mouse
         float mouseX = Input.GetAxis("Mouse X"); // horizontal mouse velocity
         float mouseY = Input.GetAxis("Mouse Y"); // vertical mouse velocity
 
-        transform.parent.Rotate(0f, mouseX * 10f, 0f); // rotate camera's parent (cube)
+        transform.parent.Rotate(0f, mouseX * horizontalLookSpd * Time.deltaTime, 0f); // rotate camera's parent (cube)
 
-        verticalAngle -= mouseY * 10f;
+        verticalAngle -= mouseY * verticalLookSpd * Time.deltaTime;
         verticalAngle = Mathf.Clamp(verticalAngle, -90f, 90f);
 
-        // X = Pitch, Y = Yaw, Z = Roll
         transform.localEulerAngles = new Vector3(verticalAngle,
                                                  transform.localEulerAngles.y,
                                                  0f);

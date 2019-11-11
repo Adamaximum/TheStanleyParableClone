@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7017014208915218474}
   m_Layer: 0
   m_Name: EventTrigger
-  m_TagString: Untagged
+  m_TagString: TriggerNormal
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -114,4 +114,5 @@ MonoBehaviour:
   - {fileID: 8300000, guid: f55131ed3e77aef43a94dee407340372, type: 3}
   doors:
   - {fileID: 0}
+  delayedDoors: []
   triggered: 0
