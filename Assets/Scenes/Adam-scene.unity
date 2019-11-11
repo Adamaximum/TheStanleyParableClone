@@ -2322,6 +2322,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerRepeating
+      objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2455,6 +2460,11 @@ PrefabInstance:
       propertyPath: voiceOverLines.Array.data[3]
       value: 
       objectReference: {fileID: 8300000, guid: 37b34f1761bf41a44a42de9f83268373, type: 3}
+    - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: triggered
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8e2f83c69652747972568791c02d07, type: 3}
 --- !u!4 &439162255 stripped
@@ -3140,6 +3150,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: EventTrigger (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerInsane
+      objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -3203,17 +3218,17 @@ PrefabInstance:
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: doors.Array.size
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: subtitleTexts.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: voiceOverLines.Array.size
-      value: 19
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
@@ -3234,12 +3249,12 @@ PrefabInstance:
         type: 3}
       propertyPath: doors.Array.data[1]
       value: 
-      objectReference: {fileID: 325958010}
+      objectReference: {fileID: 324361762}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: doors.Array.data[2]
       value: 
-      objectReference: {fileID: 1411969426}
+      objectReference: {fileID: 536447597}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
       propertyPath: subtitleTexts.Array.data[1]
@@ -3346,7 +3361,7 @@ PrefabInstance:
         type: 3}
       propertyPath: subtitleTexts.Array.data[16]
       value: 'And then, moments before collapsing to the ground, Stanley clenched
-        his firsts and screamed to anyone that [who] might be listening:'
+        his fists and screamed to anyone that [who] might be listening:'
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
@@ -3434,6 +3449,26 @@ PrefabInstance:
       propertyPath: voiceOverLines.Array.data[18]
       value: 
       objectReference: {fileID: 8300000, guid: ddfa79234862c7c4097122412b100c82, type: 3}
+    - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: doors.Array.data[3]
+      value: 
+      objectReference: {fileID: 359444208}
+    - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: doors.Array.data[4]
+      value: 
+      objectReference: {fileID: 13529169}
+    - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: subtitleTexts.Array.data[19]
+      value: And then, everything went black.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218474, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: voiceOverLines.Array.data[19]
+      value: 
+      objectReference: {fileID: 8300000, guid: f00a5aef437738d408af17635eac6089, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9b8e2f83c69652747972568791c02d07, type: 3}
 --- !u!4 &555763666 stripped
@@ -3913,6 +3948,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventTrigger (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerRepeating
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
@@ -4660,6 +4700,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventTrigger (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerRepeating
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}
@@ -5691,6 +5736,8 @@ GameObject:
   - component: {fileID: 1117016331}
   - component: {fileID: 1117016330}
   - component: {fileID: 1117016329}
+  - component: {fileID: 1117016335}
+  - component: {fileID: 1117016328}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Player
@@ -5698,6 +5745,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &1117016328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117016327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 741ad08c1c1f261499092c3a6f19baf6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  lastTrigger: {fileID: 0}
 --- !u!114 &1117016329
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5795,13 +5855,26 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1117016327}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 1.53, y: 0.744, z: 0}
+  m_LocalPosition: {x: 2.274, y: 0.744, z: -0.122}
   m_LocalScale: {x: 0.73586, y: 0.73586, z: 0.73586}
   m_Children:
   - {fileID: 963194228}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+--- !u!114 &1117016335
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1117016327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 05090bcc24c3626428f204d2fd938d93, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cheatCode: Insane
 --- !u!1 &1156852216
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,6 +7841,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventTrigger (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerRepeating
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}

@@ -39,6 +39,22 @@ public class EventTrigger : MonoBehaviour
                 doors[1].GetComponent<DoorState>().doorOpen = true;
             }
         }
+        if (gameObject.tag == "TriggerInsane")
+        {
+            doors[0].GetComponent<DoorState>().doorOpen = false;
+
+            if (manager.currentLine > 14)
+            {
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<DoorState>().doorOpen = false;
+                }
+            }
+            if (manager.currentLine > 20)
+            {
+                Camera.main.enabled = false;
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -63,16 +79,12 @@ public class EventTrigger : MonoBehaviour
                 manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
-            if (gameObject.tag == "TriggerNormal")
+            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRepeating")
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
                 }
-            }
-            else
-            {
-                SpecialEventTriggers();
             }
         }
     }

@@ -7,6 +7,8 @@ TagManager:
   - Interactable
   - TriggerNormal
   - TriggerLounge
+  - TriggerInsane
+  - TriggerRepeating
   layers:
   - Default
   - TransparentFX
