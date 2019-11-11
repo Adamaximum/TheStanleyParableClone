@@ -5,6 +5,8 @@ TagManager:
   serializedVersion: 2
   tags:
   - Interactable
+  - TriggerNormal
+  - TriggerLounge
   layers:
   - Default
   - TransparentFX

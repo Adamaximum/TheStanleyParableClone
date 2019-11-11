@@ -24,6 +24,20 @@ public class EventTrigger : MonoBehaviour
         if (triggered)
         {
             manager.PlayVoice();
+            SpecialEventTriggers();
+        }
+    }
+
+    void SpecialEventTriggers()
+    {
+        if (gameObject.tag == "TriggerLounge")
+        {
+            doors[0].GetComponent<DoorState>().doorOpen = false;
+
+            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
+            {
+                doors[1].GetComponent<DoorState>().doorOpen = true;
+            }
         }
     }
 
@@ -32,12 +46,16 @@ public class EventTrigger : MonoBehaviour
         if (other.gameObject.tag == "Player" && !triggered)
         {
             triggered = true; // Ensures this trigger won't start again
-            manager.source.Stop(); // Stops current audio
-            manager.currentLine = 0; // Resets current line
-            manager.subtitleTexts.Clear(); // Clears current set of subtitles
-            manager.voiceOverLines.Clear(); // Clears current set of lines
-            manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
-            manager.voiceOverLines.AddRange(voiceOverLines); // Adds new lines
+
+            if (subtitleTexts.Length > 0 && voiceOverLines.Length > 0)
+            {
+                manager.source.Stop(); // Stops current audio
+                manager.currentLine = 0; // Resets current line
+                manager.subtitleTexts.Clear(); // Clears current set of subtitles
+                manager.voiceOverLines.Clear(); // Clears current set of lines
+                manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
+                manager.voiceOverLines.AddRange(voiceOverLines); // Adds new lines
+            }
 
             if (manager.currentTrigger != null)
             {
@@ -45,9 +63,16 @@ public class EventTrigger : MonoBehaviour
             }
             manager.currentTrigger = this.gameObject; // Adds the new trigger
 
-            for (int i = 0; i < doors.Length; i++)
+            if (gameObject.tag == "TriggerNormal")
             {
-                doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
+                for (int i = 0; i < doors.Length; i++)
+                {
+                    doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
+                }
+            }
+            else
+            {
+                SpecialEventTriggers();
             }
         }
     }
