@@ -47,7 +47,7 @@ public class EventTrigger : MonoBehaviour
         {
             triggered = true; // Ensures this trigger won't start again
 
-            if (subtitleTexts.Length > 0 && voiceOverLines.Length > 0)
+            if (subtitleTexts.Length > 0 && voiceOverLines.Length > 0) // Only if there is dialogue
             {
                 manager.source.Stop(); // Stops current audio
                 manager.currentLine = 0; // Resets current line
@@ -55,13 +55,13 @@ public class EventTrigger : MonoBehaviour
                 manager.voiceOverLines.Clear(); // Clears current set of lines
                 manager.subtitleTexts.AddRange(subtitleTexts); // Adds new subtitles
                 manager.voiceOverLines.AddRange(voiceOverLines); // Adds new lines
-            }
 
-            if (manager.currentTrigger != null)
-            {
-                Destroy(manager.currentTrigger); // Destroys the old trigger
+                if (manager.currentTrigger != null)
+                {
+                    Destroy(manager.currentTrigger); // Destroys the old trigger
+                }
+                manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
-            manager.currentTrigger = this.gameObject; // Adds the new trigger
 
             if (gameObject.tag == "TriggerNormal")
             {
