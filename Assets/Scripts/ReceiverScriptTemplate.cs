@@ -6,7 +6,7 @@ using UnityEngine;
 // FUNCTION: This object will run Activate() once the player presses E on it.
 
 // ** NOTE: There is CUSTOM CODE in this script. Whatever object this is placed on, the custom code will be specific to that object!!! 
-public class ReceiverScript : MonoBehaviour
+public class ReceiverScriptTemplate : MonoBehaviour
 {
     public AudioSource activatedSource;
     //public AudioClip scaryClip;
