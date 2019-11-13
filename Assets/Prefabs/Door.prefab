@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 3130310660969171544}
   - component: {fileID: 3130310660969171543}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: MainDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -106,7 +106,7 @@ GameObject:
   - component: {fileID: 3130310661674590343}
   - component: {fileID: 3130310661674590342}
   m_Layer: 0
-  m_Name: Cube
+  m_Name: Knob
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
