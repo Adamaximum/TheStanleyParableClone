@@ -9,6 +9,7 @@ TagManager:
   - TriggerLounge
   - TriggerInsane
   - TriggerRepeating
+  - GoingUpStairs
   layers:
   - Default
   - TransparentFX
