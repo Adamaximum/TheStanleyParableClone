@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EventTrigger : MonoBehaviour
 {
@@ -13,6 +14,7 @@ public class EventTrigger : MonoBehaviour
     public bool triggered;
 
     public Camera blackout;
+    public SpriteRenderer filter;
 
     // Start is called before the first frame update
     void Start()
@@ -20,6 +22,7 @@ public class EventTrigger : MonoBehaviour
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
         blackout = GameObject.Find("Blackout Camera").GetComponent<Camera>();
+        filter = GameObject.Find("Camera Filter").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -53,11 +56,23 @@ public class EventTrigger : MonoBehaviour
                 {
                     doors[i].GetComponent<DoorState>().doorOpen = false;
                 }
+
+                if (filter.color.a < 190)
+                {
+                    filter.color += new Color(0, 0, 0, 0.00035f);
+                }
             }
             if (manager.currentLine > 19) // Camera goes black then transitions at end of lines
             {
-                Camera.main.enabled = false;
-                blackout.enabled = true;
+                //Camera.main.enabled = false;
+                //blackout.enabled = true;
+
+                filter.color = new Color(0, 0, 0, 255);
+
+                if (!manager.source.isPlaying)
+                {
+                    SceneManager.LoadScene("MariellaScene");
+                }
             }
         }
     }
