@@ -12,16 +12,20 @@ public class EventTrigger : MonoBehaviour
 
     public bool triggered;
 
+    public Camera blackout;
+
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+
+        blackout = GameObject.Find("Blackout Camera").GetComponent<Camera>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (triggered)
+        if (triggered) // Activates the Dialogue Manager and Special Events (if applicable)
         {
             manager.PlayVoice();
             SpecialEventTriggers();
@@ -30,7 +34,7 @@ public class EventTrigger : MonoBehaviour
 
     void SpecialEventTriggers()
     {
-        if (gameObject.tag == "TriggerLounge")
+        if (gameObject.tag == "TriggerLounge") // The second door in the lounge opens after a delay
         {
             doors[0].GetComponent<DoorState>().doorOpen = false;
 
@@ -39,20 +43,21 @@ public class EventTrigger : MonoBehaviour
                 doors[1].GetComponent<DoorState>().doorOpen = true;
             }
         }
-        if (gameObject.tag == "TriggerInsane")
+        if (gameObject.tag == "TriggerInsane") // Triggers scripted events after a certain amount of lines
         {
             doors[0].GetComponent<DoorState>().doorOpen = false;
 
-            if (manager.currentLine > 14)
+            if (manager.currentLine > 14) // All doors close past this line
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].GetComponent<DoorState>().doorOpen = false;
                 }
             }
-            if (manager.currentLine > 20)
+            if (manager.currentLine > 19) // Camera goes black then transitions at end of lines
             {
                 Camera.main.enabled = false;
+                blackout.enabled = true;
             }
         }
     }
@@ -79,12 +84,17 @@ public class EventTrigger : MonoBehaviour
                 manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
-            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRepeating")
+            if (gameObject.tag == "TriggerNormal")
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
                 }
+            }
+            if (gameObject.tag == "TriggerRepeating")
+            {
+                doors[0].GetComponent<DoorState>().doorOpen = false;
+                doors[1].GetComponent<DoorState>().doorOpen = true;
             }
         }
     }
