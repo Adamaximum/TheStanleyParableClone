@@ -863,6 +863,7 @@ MonoBehaviour:
     whose impressions of her would affect her career, and indeed, the rest of her
     life.
   - She stood there for only a moment, looking down at the body, and then she ran.
+  - 
   voiceOverLines:
   - {fileID: 8300000, guid: f4e7bf63eead613459c0849eadc11a3d, type: 3}
   - {fileID: 8300000, guid: f0bd25dc0dff5fc4b9295551fc40865a, type: 3}
@@ -873,6 +874,7 @@ MonoBehaviour:
   - {fileID: 8300000, guid: ad64df84f8d065b4ead8d35675d72637, type: 3}
   - {fileID: 8300000, guid: 905957358666c2f46b89b24f8cfd89c8, type: 3}
   - {fileID: 8300000, guid: 96bdfb341794dca44a5b21a532536804, type: 3}
+  - {fileID: 8300000, guid: f00a5aef437738d408af17635eac6089, type: 3}
 --- !u!4 &1942900063
 Transform:
   m_ObjectHideFlags: 0

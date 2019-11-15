@@ -17,13 +17,13 @@ public class MariellaCutscene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (manager.currentLine > 2 && manager.source.isPlaying)
+        if (manager.currentLine > 2 && manager.currentLine < 9)
         {
             fade.color -= new Color(0, 0, 0, 0.005f);
 
             transform.localPosition += new Vector3(0, 0.002f, 0);
         }
-        else
+        else if (manager.currentLine > 9)
         {
             fade.color = new Color(0, 0, 0, 255);
         }
