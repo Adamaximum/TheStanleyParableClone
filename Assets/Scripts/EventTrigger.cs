@@ -9,19 +9,21 @@ public class EventTrigger : MonoBehaviour
 
     public string[] subtitleTexts;
     public AudioClip[] voiceOverLines;
-    public GameObject[] doors;
+    public DoorState[] doors;
 
     public bool triggered;
-
-    public Camera blackout;
+    
+    public PlayerMoveScript controls;
+    public MouseLook mouseLook;
     public SpriteRenderer filter;
 
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
-
-        blackout = GameObject.Find("Blackout Camera").GetComponent<Camera>();
+        
+        controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
+        mouseLook = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         filter = GameObject.Find("Camera Filter").GetComponent<SpriteRenderer>();
     }
 
@@ -39,22 +41,22 @@ public class EventTrigger : MonoBehaviour
     {
         if (gameObject.tag == "TriggerLounge") // The second door in the lounge opens after a delay
         {
-            doors[0].GetComponent<DoorState>().doorOpen = false;
+            doors[0].doorOpen = false;
 
             if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
             {
-                doors[1].GetComponent<DoorState>().doorOpen = true;
+                doors[1].doorOpen = true;
             }
         }
         if (gameObject.tag == "TriggerInsane") // Triggers scripted events after a certain amount of lines
         {
-            doors[0].GetComponent<DoorState>().doorOpen = false;
+            doors[0].doorOpen = false;
 
             if (manager.currentLine > 14) // All doors close past this line
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
-                    doors[i].GetComponent<DoorState>().doorOpen = false;
+                    doors[i].doorOpen = false;
                 }
 
                 if (filter.color.a < 190)
@@ -64,10 +66,9 @@ public class EventTrigger : MonoBehaviour
             }
             if (manager.currentLine > 19) // Camera goes black then transitions at end of lines
             {
-                //Camera.main.enabled = false;
-                //blackout.enabled = true;
-
                 filter.color = new Color(0, 0, 0, 255);
+                controls.enabled = false;
+                mouseLook.enabled = false;
 
                 if (!manager.source.isPlaying)
                 {
@@ -103,13 +104,13 @@ public class EventTrigger : MonoBehaviour
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
-                    doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
+                    doors[i].doorOpen = !doors[i].doorOpen;
                 }
             }
             if (gameObject.tag == "TriggerRepeating")
             {
-                doors[0].GetComponent<DoorState>().doorOpen = false;
-                doors[1].GetComponent<DoorState>().doorOpen = true;
+                doors[0].doorOpen = false;
+                doors[1].doorOpen = true;
             }
         }
     }
