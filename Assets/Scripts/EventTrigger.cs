@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+// USAGE: on EventTrigger objects
+// PURPOSE: to trigger scripted events on collision, such as dialogue and subtitles, doors, etc.
 public class EventTrigger : MonoBehaviour
 {
     public DialogueManager manager;
@@ -13,6 +15,7 @@ public class EventTrigger : MonoBehaviour
 
     public bool triggered;
     
+    [Header ("Player Effects")]
     public PlayerMoveScript controls;
     public MouseLook mouseLook;
     public SpriteRenderer filter;
@@ -48,6 +51,7 @@ public class EventTrigger : MonoBehaviour
                 doors[1].doorOpen = true;
             }
         }
+
         if (gameObject.tag == "TriggerInsane") // Triggers scripted events after a certain amount of lines
         {
             doors[0].doorOpen = false;
@@ -100,14 +104,15 @@ public class EventTrigger : MonoBehaviour
                 manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
-            if (gameObject.tag == "TriggerNormal")
+            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRightDoor")
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].doorOpen = !doors[i].doorOpen;
                 }
             }
-            if (gameObject.tag == "TriggerRepeating")
+
+            if (gameObject.tag == "TriggerRepeating") // First door always closes, second always opens
             {
                 doors[0].doorOpen = false;
                 doors[1].doorOpen = true;

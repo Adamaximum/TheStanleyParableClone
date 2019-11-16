@@ -1692,7 +1692,7 @@ PrefabInstance:
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: openAngle
-      value: 90
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
@@ -10926,6 +10926,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 741ad08c1c1f261499092c3a6f19baf6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  leftDoorTrigger: {fileID: 1198052862}
   lastTrigger: {fileID: 0}
 --- !u!114 &1117016329
 MonoBehaviour:
@@ -11961,6 +11962,12 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1178692861}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &1198052862 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+    type: 3}
+  m_PrefabInstance: {fileID: 497222901}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1200852223
 GameObject:
   m_ObjectHideFlags: 0
@@ -17289,6 +17296,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: EventTrigger (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7017014208915218477, guid: 9b8e2f83c69652747972568791c02d07,
+        type: 3}
+      propertyPath: m_TagString
+      value: TriggerRightDoor
       objectReference: {fileID: 0}
     - target: {fileID: 7017014208915218486, guid: 9b8e2f83c69652747972568791c02d07,
         type: 3}

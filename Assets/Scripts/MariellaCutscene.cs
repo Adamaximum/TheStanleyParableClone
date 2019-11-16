@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// USAGE: place on the Main Camera in the Mariella Cutscene
+// PURPOSE: to operate the camera's movements during the cutscene according to the DialogueManager's line
 public class MariellaCutscene : MonoBehaviour
 {
     public DialogueManager manager;
@@ -17,13 +19,16 @@ public class MariellaCutscene : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (manager.currentLine > 2 && manager.currentLine < 9)
+        if (manager.currentLine > 2) // Camera begins rising
         {
-            fade.color -= new Color(0, 0, 0, 0.005f);
-
             transform.localPosition += new Vector3(0, 0.002f, 0);
         }
-        else if (manager.currentLine > 9)
+
+        if (manager.currentLine > 2 && manager.currentLine < 9) // Camera fades in
+        {
+            fade.color -= new Color(0, 0, 0, 0.005f);
+        }
+        else if (manager.currentLine > 9) // Camera blacks out
         {
             fade.color = new Color(0, 0, 0, 255);
         }

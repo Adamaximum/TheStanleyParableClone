@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// USAGE: on an empty GameObject called DialogueManager
+// PURPOSE: to receive dialogue and subtitles from triggers, then display/play them on the subtitle canvas
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI subtitles;
