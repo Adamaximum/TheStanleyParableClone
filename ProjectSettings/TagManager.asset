@@ -10,6 +10,7 @@ TagManager:
   - TriggerInsane
   - TriggerRepeating
   - TriggerRightDoor
+  - GoingUpStairs
   layers:
   - Default
   - TransparentFX
