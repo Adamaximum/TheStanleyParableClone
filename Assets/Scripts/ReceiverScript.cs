@@ -9,15 +9,16 @@ using UnityEngine;
 public class ReceiverScript : MonoBehaviour
 {
     public AudioSource activatedSource;
-    //public AudioClip scaryClip;
-
     public bool isActivated;
     private bool played = false;
+
+
+    [Header("ELEVATOR STUFFS")]
+    public GameObject elevator; // the elevator
 
     void Start() {
         isActivated = false;
         activatedSource.GetComponent<AudioSource>();
-        //activatedSource.clip = scaryClip;
     }
 
     // Update is called once per frame
@@ -25,6 +26,12 @@ public class ReceiverScript : MonoBehaviour
     {
         if (isActivated && !played) {
             // [[[[[THIS OBJECT'S CUSTOM CODE STARTS HERE]]]]]
+            
+            // codes for elevator
+            if (elevator.transform.position.y > elevator.GetComponent<elevatorScript>().elevatorYDestination){ // when the button is pressed, if the elevator is higher than the destination
+                elevator.GetComponent<elevatorScript>().moving = true; // set elevator to move
+            }
+
             Debug.Log("Button is Activated. Commence code now!");
             activatedSource.PlayOneShot(activatedSource.clip);
             played = true;

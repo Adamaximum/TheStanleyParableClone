@@ -2,17 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// USAGE: place on Door objects
+// PURPOSE: to open or close doors at specific angles when called from an EventTrigger
 public class DoorState : MonoBehaviour
 {
     public bool doorOpen;
     public float openAngle;
     public float closeAngle;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
     // Update is called once per frame
     void Update()
