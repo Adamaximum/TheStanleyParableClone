@@ -1953,6 +1953,16 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 138556662352869982, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 47.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 138556662352869982, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 71.1
+      objectReference: {fileID: 0}
     - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_fontAsset
@@ -1983,16 +1993,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 138556662352869982, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 47.3
-      objectReference: {fileID: 0}
-    - target: {fileID: 138556662352869982, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 71.1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1539492644481193579, guid: 412f9115e063eb44da206361da475cb2, type: 3}
@@ -5835,6 +5835,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpd: 4
+  slopeFix: 0
 --- !u!54 &1117016330
 Rigidbody:
   m_ObjectHideFlags: 0
