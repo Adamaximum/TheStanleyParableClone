@@ -39,7 +39,7 @@ public class PlayerMoveScript : MonoBehaviour
         if (other.transform.tag == "GoingUpStairs" && myInput.x == 0 && myInput.z == 0){ // when the player is standing still on a stair
             noDownwardForce = true; // don't apply downward force
             myRb.useGravity = false; // don't use gravity
-            myRb.velocity = new Vector3(0,0,0); // just stand still
+            //myRb.velocity = new Vector3(0,0,0); // just stand still
         }
         else if (other.transform.tag == "GoingUpStairs" && (Vector3.Angle(myRb.velocity,other.transform.right) < 90)){ // when the player is going up
             noDownwardForce = true; // don't apply downward force
