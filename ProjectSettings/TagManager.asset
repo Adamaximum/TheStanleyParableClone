@@ -9,6 +9,7 @@ TagManager:
   - TriggerLounge
   - TriggerInsane
   - TriggerRepeating
+  - TriggerRightDoor
   - GoingUpStairs
   layers:
   - Default

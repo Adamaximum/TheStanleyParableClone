@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+// USAGE: on an empty GameObject called DialogueManager
+// PURPOSE: to receive dialogue and subtitles from triggers, then display/play them on the subtitle canvas
 public class DialogueManager : MonoBehaviour
 {
     public TextMeshProUGUI subtitles;
@@ -37,7 +39,7 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!source.isPlaying)
+        if (!source.isPlaying) // Turns off subtitles and panels if no audio is playing
         {
             subtitles.text = "";
             panelGiant.enabled = false;
@@ -49,7 +51,7 @@ public class DialogueManager : MonoBehaviour
         PlayVoice();
     }
 
-    public void PlayVoice()
+    public void PlayVoice() // Plays through all lines until the list reaches an end
     {
         if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {

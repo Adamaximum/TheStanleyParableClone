@@ -1,27 +1,39 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
+// USAGE: on EventTrigger objects
+// PURPOSE: to trigger scripted events on collision, such as dialogue and subtitles, doors, etc.
 public class EventTrigger : MonoBehaviour
 {
     public DialogueManager manager;
 
     public string[] subtitleTexts;
     public AudioClip[] voiceOverLines;
-    public GameObject[] doors;
+    public DoorState[] doors;
 
     public bool triggered;
+    
+    [Header ("Player Effects")]
+    public PlayerMoveScript controls;
+    public MouseLook mouseLook;
+    public SpriteRenderer filter;
 
     // Start is called before the first frame update
     void Start()
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
+        
+        controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
+        mouseLook = GameObject.Find("Main Camera").GetComponent<MouseLook>();
+        filter = GameObject.Find("Camera Filter").GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (triggered)
+        if (triggered) // Activates the Dialogue Manager and Special Events (if applicable)
         {
             manager.PlayVoice();
             SpecialEventTriggers();
@@ -30,29 +42,42 @@ public class EventTrigger : MonoBehaviour
 
     void SpecialEventTriggers()
     {
-        if (gameObject.tag == "TriggerLounge")
+        if (gameObject.tag == "TriggerLounge") // The second door in the lounge opens after a delay
         {
-            doors[0].GetComponent<DoorState>().doorOpen = false;
+            doors[0].doorOpen = false;
 
             if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
             {
-                doors[1].GetComponent<DoorState>().doorOpen = true;
+                doors[1].doorOpen = true;
             }
         }
-        if (gameObject.tag == "TriggerInsane")
-        {
-            doors[0].GetComponent<DoorState>().doorOpen = false;
 
-            if (manager.currentLine > 14)
+        if (gameObject.tag == "TriggerInsane") // Triggers scripted events after a certain amount of lines
+        {
+            doors[0].doorOpen = false;
+
+            if (manager.currentLine > 14) // All doors close past this line
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
-                    doors[i].GetComponent<DoorState>().doorOpen = false;
+                    doors[i].doorOpen = false;
+                }
+
+                if (filter.color.a < 190)
+                {
+                    filter.color += new Color(0, 0, 0, 0.00035f);
                 }
             }
-            if (manager.currentLine > 20)
+            if (manager.currentLine > 19) // Camera goes black then transitions at end of lines
             {
-                Camera.main.enabled = false;
+                filter.color = new Color(0, 0, 0, 255);
+                controls.enabled = false;
+                mouseLook.enabled = false;
+
+                if (!manager.source.isPlaying)
+                {
+                    SceneManager.LoadScene("MariellaScene");
+                }
             }
         }
     }
@@ -79,12 +104,18 @@ public class EventTrigger : MonoBehaviour
                 manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
-            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRepeating")
+            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRightDoor")
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
-                    doors[i].GetComponent<DoorState>().doorOpen = !doors[i].GetComponent<DoorState>().doorOpen;
+                    doors[i].doorOpen = !doors[i].doorOpen;
                 }
+            }
+
+            if (gameObject.tag == "TriggerRepeating") // First door always closes, second always opens
+            {
+                doors[0].doorOpen = false;
+                doors[1].doorOpen = true;
             }
         }
     }
