@@ -13,25 +13,24 @@ public class PlayerMoveScript : MonoBehaviour
 
     void Start()
     {
-        myRb = GetComponent<Rigidbody>();
+        myRb = GetComponent<Rigidbody>(); // get rigidbody
     }
 
     void Update()
     {
-        float horizontal = Input.GetAxis("Horizontal");
+        float horizontal = Input.GetAxis("Horizontal"); // get input
         float vertical = Input.GetAxis("Vertical");
 
-        myInput = horizontal * transform.right;
+        myInput = horizontal * transform.right; // put the input in a vector3
         myInput += vertical * transform.forward;
     }
 
     void FixedUpdate(){
-        print(noDownwardForce);
         if (!noDownwardForce){
-            myRb.velocity = new Vector3(myInput.x * moveSpd, myRb.velocity.y - slopeFix * Time.deltaTime, myInput.z * moveSpd);
+            myRb.velocity = new Vector3(myInput.x * moveSpd, myRb.velocity.y - slopeFix * Time.deltaTime, myInput.z * moveSpd); // when not going up stairs, apply a downward force to keep player on ground
         }
         else{
-            myRb.velocity = new Vector3(myInput.x * moveSpd, myRb.velocity.y, myInput.z * moveSpd);
+            myRb.velocity = new Vector3(myInput.x * moveSpd, myRb.velocity.y, myInput.z * moveSpd); // when moving up stairs, take away downward force
             //myRb.velocity = myInput * moveSpd;
        }
     }
