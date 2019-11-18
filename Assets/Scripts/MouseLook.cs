@@ -22,11 +22,11 @@ public class MouseLook : MonoBehaviour
 
         transform.parent.Rotate(0f, mouseX * horizontalLookSpd * Time.deltaTime, 0f); // rotate camera's parent (cube)
 
-        verticalAngle -= mouseY * verticalLookSpd * Time.deltaTime;
-        verticalAngle = Mathf.Clamp(verticalAngle, -90f, 90f);
+        verticalAngle -= mouseY * verticalLookSpd * Time.deltaTime; // change the vertical angle
+        verticalAngle = Mathf.Clamp(verticalAngle, -90f, 90f); // clamp the vertical so the player can't bend over
 
         transform.localEulerAngles = new Vector3(verticalAngle,
                                                  transform.localEulerAngles.y,
-                                                 0f);
+                                                 0f); // change the camera angle
     }
 }
