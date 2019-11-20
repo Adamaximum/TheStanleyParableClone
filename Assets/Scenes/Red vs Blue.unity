@@ -2844,6 +2844,11 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 5.31
       objectReference: {fileID: 0}
+    - target: {fileID: 4771179379019977914, guid: 9ff046dfd42d100448050662a16e78df,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e353f2d755b71b43b44407965ace693, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ff046dfd42d100448050662a16e78df, type: 3}
 --- !u!1 &385789707
@@ -3551,6 +3556,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpd: 4
+  slopeFix: 0
 --- !u!82 &478229382
 AudioSource:
   m_ObjectHideFlags: 0
@@ -10673,6 +10679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpd: 4
+  slopeFix: 0
 --- !u!82 &1567065449
 AudioSource:
   m_ObjectHideFlags: 0
