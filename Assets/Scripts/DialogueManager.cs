@@ -8,6 +8,8 @@ using TMPro;
 // PURPOSE: to receive dialogue and subtitles from triggers, then display/play them on the subtitle canvas
 public class DialogueManager : MonoBehaviour
 {
+    public TextMeshProUGUI centerTitle;
+
     public TextMeshProUGUI subtitles;
     public AudioSource source;
 
@@ -25,6 +27,8 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        centerTitle = GameObject.Find("CenterTitle").GetComponent<TextMeshProUGUI>();
+
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
         source = GameObject.Find("Subtitles").GetComponent<AudioSource>();
 
@@ -33,6 +37,7 @@ public class DialogueManager : MonoBehaviour
         panelShort = GameObject.Find("PanelShort").GetComponent<Image>();
         panelTall = GameObject.Find("PanelTall").GetComponent<Image>();
 
+        centerTitle.color = new Color(centerTitle.color.r, centerTitle.color.g, centerTitle.color.b, 0);
         subtitles.text = "";
     }
 
@@ -46,6 +51,10 @@ public class DialogueManager : MonoBehaviour
 
             panelShort.enabled = false;
             panelTall.enabled = false;
+        }
+        if (subtitles.text == "")
+        {
+            panelGiant.enabled = false;
         }
 
         PlayVoice();

@@ -36,7 +36,7 @@ public class ReceiverScript : MonoBehaviour
             activatedSource.PlayOneShot(activatedSource.clip);
             played = true;
         } else {
-            Debug.Log("Waiting...");
+            //Debug.Log("Waiting...");
         }
     }
 }
