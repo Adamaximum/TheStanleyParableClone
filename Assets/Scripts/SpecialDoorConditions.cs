@@ -34,6 +34,7 @@ public class SpecialDoorConditions : MonoBehaviour
             transform.position = new Vector3 (teleportDestination[teleportNumber].position.x, 
                 teleportDestination[teleportNumber].position.y, teleportDestination[teleportNumber].position.z);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
+            //gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             teleportNumber++;
         }
     }
