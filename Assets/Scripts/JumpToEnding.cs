@@ -21,5 +21,10 @@ public class JumpToEnding : MonoBehaviour
             transform.position = new Vector3(60.18f, transform.position.y, 20.625f);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
         }
+        if (cheatCode == "RedBlue")
+        {
+            transform.position = new Vector3(58.26f, -9.28f, 35.6f);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
+        }
     }
 }

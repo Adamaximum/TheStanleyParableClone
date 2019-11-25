@@ -11,6 +11,8 @@ TagManager:
   - TriggerRepeating
   - TriggerRightDoor
   - GoingUpStairs
+  - TriggerTeleport
+  - TriggerRedDoor
   layers:
   - Default
   - TransparentFX

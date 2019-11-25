@@ -80,6 +80,29 @@ public class EventTrigger : MonoBehaviour
                 }
             }
         }
+
+        if (gameObject.tag == "TriggerRedDoor")
+        {
+            doors[0].doorOpen = false;
+
+            filter.color = new Color(0, 0, 0, 255);
+            controls.enabled = false;
+            mouseLook.enabled = false;
+
+            if (manager.currentLine == 3)
+            {
+                manager.centerTitle.color += new Color(0, 0, 0, 0.008f);
+            }
+            if (manager.currentLine == 4 && !manager.source.isPlaying)
+            {
+                manager.centerTitle.color -= new Color(0, 0, 0, 0.008f);
+
+                if (manager.centerTitle.color.a <= 0)
+                {
+                    //SceneManager.LoadScene("ApartmentEnding");
+                }
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -118,5 +141,10 @@ public class EventTrigger : MonoBehaviour
                 doors[1].doorOpen = true;
             }
         }
+    }
+
+    IEnumerator WaitASecond()
+    {
+        yield return new WaitForSeconds(5);
     }
 }

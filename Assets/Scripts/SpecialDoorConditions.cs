@@ -7,7 +7,11 @@ using UnityEngine;
 public class SpecialDoorConditions : MonoBehaviour
 {
     public GameObject leftDoorTrigger;
+
     public EventTrigger lastTrigger;
+
+    public Transform[] teleportDestination;
+    public int teleportNumber;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +27,15 @@ public class SpecialDoorConditions : MonoBehaviour
                 lastTrigger.triggered = false;
             }
             lastTrigger = other.gameObject.GetComponent<EventTrigger>();
+        }
+
+        if (other.gameObject.tag == "TriggerTeleport")
+        {
+            transform.position = new Vector3 (teleportDestination[teleportNumber].position.x, 
+                teleportDestination[teleportNumber].position.y, teleportDestination[teleportNumber].position.z);
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
+            //gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
+            teleportNumber++;
         }
     }
 }
