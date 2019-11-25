@@ -20,7 +20,7 @@ public class MouseLook : MonoBehaviour
         float mouseX = Input.GetAxis("Mouse X"); // horizontal mouse velocity
         float mouseY = Input.GetAxis("Mouse Y"); // vertical mouse velocity
 
-        transform.parent.Rotate(0f, mouseX * horizontalLookSpd * Time.deltaTime, 0f); // rotate camera's parent (cube)
+        transform.parent.Rotate(0f, mouseX * horizontalLookSpd * Time.deltaTime, 0f); // rotate player
 
         verticalAngle -= mouseY * verticalLookSpd * Time.deltaTime; // change the vertical angle
         verticalAngle = Mathf.Clamp(verticalAngle, -90f, 90f); // clamp the vertical so the player can't bend over
