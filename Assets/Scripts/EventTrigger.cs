@@ -99,7 +99,7 @@ public class EventTrigger : MonoBehaviour
 
                 if (manager.centerTitle.color.a <= 0)
                 {
-                    //SceneManager.LoadScene("ApartmentEnding");
+                    SceneManager.LoadScene("ApartmentEnding");
                 }
             }
         }

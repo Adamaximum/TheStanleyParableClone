@@ -11,4 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MariellaScene.unity
     guid: 524bfc09489e44e48822e62c5ad1533b
+  - enabled: 1
+    path: Assets/Scenes/ApartmentEnding.unity
+    guid: 1d2d9864b4cdaf746b55b49d8fe1684a
   m_configObjects: {}
