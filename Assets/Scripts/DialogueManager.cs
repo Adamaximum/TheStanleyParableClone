@@ -37,7 +37,6 @@ public class DialogueManager : MonoBehaviour
         panelShort = GameObject.Find("PanelShort").GetComponent<Image>();
         panelTall = GameObject.Find("PanelTall").GetComponent<Image>();
 
-        centerTitle.color = new Color(centerTitle.color.r, centerTitle.color.g, centerTitle.color.b, 0);
         subtitles.text = "";
     }
 
