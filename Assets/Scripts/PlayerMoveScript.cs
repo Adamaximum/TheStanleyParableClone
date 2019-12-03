@@ -36,7 +36,7 @@ public class PlayerMoveScript : MonoBehaviour
     }
 
     private void OnTriggerStay(Collider other) {
-        print(Vector3.Angle(myRb.velocity, other.transform.right));
+        //print(Vector3.Angle(myRb.velocity, other.transform.right));
         if (other.transform.tag == "GoingUpStairs" && myInput.x == 0 && myInput.z == 0){ // when the player is standing still on a stair
             noDownwardForce = true; // don't apply downward force
             myRb.useGravity = false; // don't use gravity
