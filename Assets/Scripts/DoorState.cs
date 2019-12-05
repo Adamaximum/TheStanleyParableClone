@@ -10,42 +10,58 @@ public class DoorState : MonoBehaviour
     public float openAngle;
     public float closeAngle;
 
-    bool doorClosed;
+    public bool doorMoving;
 
     // Update is called once per frame
     void Update()
     {
         if (doorOpen)
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, openAngle, transform.localEulerAngles.z);
+            //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, openAngle, transform.localEulerAngles.z);
+            if (!doorMoving)
+            {
+                StartCoroutine(DoorMoveOpen());
+            }
         }
         else
         {
             //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, closeAngle, transform.localEulerAngles.z);
-            if (!doorClosed)
+            if (!doorMoving)
             {
-                StartCoroutine(doorMovement());
+                StartCoroutine(DoorMoveClose());
             }
         }
     }
 
-    IEnumerator doorMovement()
+    IEnumerator DoorMoveClose()
     {
-        doorClosed = true;
+        doorMoving = true;
         float tracksTime = 0;
 
         while (tracksTime < 0.5f)
         {
             tracksTime += Time.deltaTime;
-            
-            
 
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 
                 Mathf.Lerp(openAngle, closeAngle, tracksTime / 0.5f), transform.localEulerAngles.z);
 
             yield return null;
+        }
+    }
 
+    IEnumerator DoorMoveOpen()
+    {
+        doorMoving = true;
+        float tracksTime = 0;
 
+        while (tracksTime < 0.5f)
+        {
+            tracksTime += Time.deltaTime;
+
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x,
+                Mathf.Lerp(closeAngle, openAngle, tracksTime / 0.5f), transform.localEulerAngles.z);
+
+            yield return null;
         }
     }
 }

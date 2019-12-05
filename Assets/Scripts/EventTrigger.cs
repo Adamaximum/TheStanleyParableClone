@@ -46,9 +46,15 @@ public class EventTrigger : MonoBehaviour
         {
             doors[0].doorOpen = false;
 
+            if (doors[0].doorOpen == false)
+            {
+                doors[0].doorMoving = false;
+            }
+
             if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
             {
                 doors[1].doorOpen = true;
+                doors[1].doorMoving = false;
             }
         }
 
@@ -56,11 +62,21 @@ public class EventTrigger : MonoBehaviour
         {
             doors[0].doorOpen = false;
 
+            if (doors[0].doorOpen == false)
+            {
+                doors[0].doorMoving = false;
+            }
+
             if (manager.currentLine > 14) // All doors close past this line
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].doorOpen = false;
+
+                    if (doors[i].doorOpen == false)
+                    {
+                        doors[i].doorMoving = false;
+                    }
                 }
 
                 if (filter.color.a < 190)
@@ -85,9 +101,11 @@ public class EventTrigger : MonoBehaviour
         {
             doors[0].doorOpen = false;
 
-            filter.color = new Color(0, 0, 0, 255);
-            controls.enabled = false;
-            mouseLook.enabled = false;
+            if (doors[0].doorOpen == false)
+            {
+                doors[0].doorMoving = false;
+                StartCoroutine(BlackoutDelay());
+            }
 
             if (manager.currentLine == 3)
             {
@@ -132,6 +150,7 @@ public class EventTrigger : MonoBehaviour
                 for (int i = 0; i < doors.Length; i++)
                 {
                     doors[i].doorOpen = !doors[i].doorOpen;
+                    doors[i].doorMoving = false;
                 }
             }
 
@@ -139,12 +158,19 @@ public class EventTrigger : MonoBehaviour
             {
                 doors[0].doorOpen = false;
                 doors[1].doorOpen = true;
+
+                doors[0].doorMoving = false;
+                doors[1].doorMoving = false;
             }
         }
     }
 
-    IEnumerator WaitASecond()
+    IEnumerator BlackoutDelay()
     {
-        yield return new WaitForSeconds(5);
+        yield return new WaitForSeconds(2);
+
+        filter.color = new Color(0, 0, 0, 255);
+        controls.enabled = false;
+        mouseLook.enabled = false;
     }
 }

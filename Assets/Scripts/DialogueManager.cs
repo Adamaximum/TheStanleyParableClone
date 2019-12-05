@@ -70,23 +70,13 @@ public class DialogueManager : MonoBehaviour
             subtitles.text = subtitleTexts[currentLine];
             subtitles.ForceMeshUpdate();
 
-            //RectTransform rectTransform = subCanvas.GetComponent<RectTransform>();
-            //Vector3 textCenter = subtitles.transform.position + subtitles.textBounds.center;
-            //Vector2 viewPortPosition = Camera.main.WorldToViewportPoint(textCenter);
-            //Vector2 screenPointPosition = new Vector2((viewPortPosition.x - 0.5f) * rectTransform.sizeDelta.x, (viewPortPosition.y - 0.5f) * rectTransform.sizeDelta.y);
-
             Vector2 subSize = subtitles.textBounds.size;
             subSize.x = panelShort.rectTransform.sizeDelta.x;
 
             panelShort.enabled = true;
 
+            subSize += new Vector2(0f, 1f);
             panelShort.rectTransform.sizeDelta = subSize;
-
-            //panelShort.rectTransform.position = screenPointPosition;
-
-            panelShort.rectTransform.position = subtitles.textBounds.center;
-
-            Debug.Log(subtitles.transform.position);
 
             source.clip = voiceOverLines[currentLine];
             source.Play();
