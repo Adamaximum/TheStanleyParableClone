@@ -3911,7 +3911,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0.001953125, y: 0.001953125, z: 1.4e-44, w: 0}
+  m_BoundingSphereOverride: {x: 4.5905e-41, y: 0, z: 0, w: 5.553152e+16}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -10543,6 +10543,27 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 941250365}
   m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &958163528 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: -5102530947620581811, guid: 80fb652c02d2b8943b42c8396cca05d3,
+    type: 3}
+  m_PrefabInstance: {fileID: 1485640079}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &958163529
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 958163528}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 324cdc1941e0c7847af33e132844144e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activatedSource: {fileID: 1567065449}
+  isActivated: 0
+  elevator: {fileID: 1552148603}
 --- !u!1 &981673860
 GameObject:
   m_ObjectHideFlags: 0
@@ -15911,6 +15932,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 149a06f127874f9438c0198fd3ec42a5, type: 2}
+    - target: {fileID: -5102530947620581811, guid: 80fb652c02d2b8943b42c8396cca05d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15919,7 +15945,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.05
+      value: 6.18
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
@@ -16513,6 +16539,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1485640079}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1552148604
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1552148603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 10644506c5b09ce489b6034c574c5808, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  movingDown: 0
+  movingUp: 0
+  elevatorYDestinationDown: -0.05
+  elevatorMoveSpd: 0.5
+  elevatorYDestinationUp: 0
 --- !u!4 &1552148605 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 80fb652c02d2b8943b42c8396cca05d3,
@@ -16687,7 +16730,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 5953491feaaddd742bb213c871aa5e7c, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -16855,7 +16898,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1567065446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.04, z: 13.04}
+  m_LocalPosition: {x: 0, y: 7.27, z: 9.53}
   m_LocalScale: {x: 0.6, y: 0.9, z: 0.6}
   m_Children:
   - {fileID: 1423286867}
