@@ -8,6 +8,8 @@ using TMPro;
 // PURPOSE: to receive dialogue and subtitles from triggers, then display/play them on the subtitle canvas
 public class DialogueManager : MonoBehaviour
 {
+    public Canvas subCanvas;
+
     public TextMeshProUGUI centerTitle;
 
     public TextMeshProUGUI subtitles;
@@ -27,6 +29,8 @@ public class DialogueManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        subCanvas = GameObject.Find("SubtitleCanvas").GetComponent<Canvas>();
+
         centerTitle = GameObject.Find("CenterTitle").GetComponent<TextMeshProUGUI>();
 
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
@@ -64,13 +68,32 @@ public class DialogueManager : MonoBehaviour
         if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {
             subtitles.text = subtitleTexts[currentLine];
+            subtitles.ForceMeshUpdate();
+
+            //RectTransform rectTransform = subCanvas.GetComponent<RectTransform>();
+            //Vector3 textCenter = subtitles.transform.position + subtitles.textBounds.center;
+            //Vector2 viewPortPosition = Camera.main.WorldToViewportPoint(textCenter);
+            //Vector2 screenPointPosition = new Vector2((viewPortPosition.x - 0.5f) * rectTransform.sizeDelta.x, (viewPortPosition.y - 0.5f) * rectTransform.sizeDelta.y);
+
+            Vector2 subSize = subtitles.textBounds.size;
+            subSize.x = panelShort.rectTransform.sizeDelta.x;
+
+            panelShort.enabled = true;
+
+            panelShort.rectTransform.sizeDelta = subSize;
+
+            //panelShort.rectTransform.position = screenPointPosition;
+
+            panelShort.rectTransform.position = subtitles.textBounds.center;
+
+            Debug.Log(subtitles.transform.position);
+
             source.clip = voiceOverLines[currentLine];
             source.Play();
 
             currentLine++;
 
-            panelGiant.enabled = true;
-
+            
             //if (subtitles.isTextOverflowing)
             //{
             //    panelTall.enabled = false;

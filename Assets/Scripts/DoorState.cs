@@ -10,6 +10,8 @@ public class DoorState : MonoBehaviour
     public float openAngle;
     public float closeAngle;
 
+    bool doorClosed;
+
     // Update is called once per frame
     void Update()
     {
@@ -19,7 +21,31 @@ public class DoorState : MonoBehaviour
         }
         else
         {
-            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, closeAngle, transform.localEulerAngles.z);
+            //transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, closeAngle, transform.localEulerAngles.z);
+            if (!doorClosed)
+            {
+                StartCoroutine(doorMovement());
+            }
+        }
+    }
+
+    IEnumerator doorMovement()
+    {
+        doorClosed = true;
+        float tracksTime = 0;
+
+        while (tracksTime < 0.5f)
+        {
+            tracksTime += Time.deltaTime;
+            
+            
+
+            transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 
+                Mathf.Lerp(openAngle, closeAngle, tracksTime / 0.5f), transform.localEulerAngles.z);
+
+            yield return null;
+
+
         }
     }
 }
