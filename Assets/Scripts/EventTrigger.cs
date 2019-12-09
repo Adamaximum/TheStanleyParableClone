@@ -105,6 +105,7 @@ public class EventTrigger : MonoBehaviour
             {
                 doors[0].doorMoving = false;
                 StartCoroutine(BlackoutDelay());
+                Debug.Log("Red is closed!");
             }
 
             if (manager.currentLine == 3)

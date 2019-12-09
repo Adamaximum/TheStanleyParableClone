@@ -15,10 +15,7 @@ public class DialogueManager : MonoBehaviour
     public TextMeshProUGUI subtitles;
     public AudioSource source;
 
-    public Image panelGiant;
-
-    public Image panelShort;
-    public Image panelTall;
+    public Image panel;
 
     public GameObject currentTrigger;
     public int currentLine;
@@ -36,10 +33,7 @@ public class DialogueManager : MonoBehaviour
         subtitles = GameObject.Find("Subtitles").GetComponent<TextMeshProUGUI>();
         source = GameObject.Find("Subtitles").GetComponent<AudioSource>();
 
-        panelGiant = GameObject.Find("PanelGiant").GetComponent<Image>();
-
-        panelShort = GameObject.Find("PanelShort").GetComponent<Image>();
-        panelTall = GameObject.Find("PanelTall").GetComponent<Image>();
+        panel = GameObject.Find("Panel").GetComponent<Image>();
 
         subtitles.text = "";
     }
@@ -50,14 +44,11 @@ public class DialogueManager : MonoBehaviour
         if (!source.isPlaying) // Turns off subtitles and panels if no audio is playing
         {
             subtitles.text = "";
-            panelGiant.enabled = false;
-
-            panelShort.enabled = false;
-            panelTall.enabled = false;
+            panel.enabled = false;
         }
         if (subtitles.text == "")
         {
-            panelGiant.enabled = false;
+            panel.enabled = false;
         }
 
         PlayVoice();
@@ -68,32 +59,18 @@ public class DialogueManager : MonoBehaviour
         if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {
             subtitles.text = subtitleTexts[currentLine];
+
             subtitles.ForceMeshUpdate();
-
             Vector2 subSize = subtitles.textBounds.size;
-            subSize.x = panelShort.rectTransform.sizeDelta.x;
-
-            panelShort.enabled = true;
-
+            subSize.x = panel.rectTransform.sizeDelta.x;
+            panel.enabled = true;
             subSize += new Vector2(0f, 1f);
-            panelShort.rectTransform.sizeDelta = subSize;
+            panel.rectTransform.sizeDelta = subSize;
 
             source.clip = voiceOverLines[currentLine];
             source.Play();
 
             currentLine++;
-
-            
-            //if (subtitles.isTextOverflowing)
-            //{
-            //    panelTall.enabled = false;
-            //    panelShort.enabled = true;
-            //}
-            //else
-            //{
-            //    panelTall.enabled = true;
-            //    panelShort.enabled = false;
-            //}
         }
     }
 }
