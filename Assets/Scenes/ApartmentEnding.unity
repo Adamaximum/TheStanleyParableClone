@@ -151,12 +151,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 421dd0d9107741a4faf2891f07156bab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  subCanvas: {fileID: 0}
   centerTitle: {fileID: 0}
   subtitles: {fileID: 0}
   source: {fileID: 0}
-  panelGiant: {fileID: 0}
-  panelShort: {fileID: 0}
-  panelTall: {fileID: 0}
+  panel: {fileID: 0}
   currentTrigger: {fileID: 0}
   currentLine: 0
   subtitleTexts:
@@ -164,7 +163,7 @@ MonoBehaviour:
   - "His job pushing buttons demanded little of him, so there was not much of himself
     to give. And in this way, Stanley\u2019s job felt less and less like his every
     day."
-  - "But if buttons need pushing one day, it means they\u2019ll need pushing the   next,
+  - "But if buttons need pushing one day, it means they\u2019ll need pushing the next,
     and then the next. So, without question or judgment, Stanley continued to do what
     the screen told him."
   - One keystroke flowed into another keystroke, flowed into his ride home, flowed
@@ -522,7 +521,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25780
+  m_Name: pb_Mesh25106
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1769,6 +1768,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cheatCode: 
+  cheatLocations: []
 --- !u!54 &600296372
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -1866,7 +1866,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25722
+  m_Name: pb_Mesh25048
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2029,7 +2029,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25664
+  m_Name: pb_Mesh24990
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2501,7 +2501,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25750
+  m_Name: pb_Mesh25076
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2973,7 +2973,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25652
+  m_Name: pb_Mesh24978
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4376,7 +4376,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh25736
+  m_Name: pb_Mesh25062
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4742,47 +4742,72 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_textInfo.characterCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_textInfo.wordCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_textInfo.lineCount
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
-        type: 3}
-      propertyPath: m_textInfo.pageCount
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_textInfo.characterCount
-      value: 0
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_textInfo.spaceCount
-      value: 0
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_textInfo.wordCount
-      value: 0
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_textInfo.lineCount
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_textInfo.pageCount
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_fontColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_fontColor32.rgba
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_fontColor.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_fontColor.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7249730002242875738, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_fontColor.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_textInfo.wordCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
+        type: 3}
+      propertyPath: m_textInfo.lineCount
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1539492644788667671, guid: 412f9115e063eb44da206361da475cb2,
         type: 3}
       propertyPath: m_textInfo.pageCount
       value: 0

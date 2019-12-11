@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using TMPro;
 
 // USAGE: place on the Main Camera in the Mariella Cutscene
@@ -66,5 +67,7 @@ public class MariellaCutscene : MonoBehaviour
         yield return new WaitForSeconds(1);
 
         Debug.Log("Now restart!");
+
+        SceneManager.LoadScene(0);
     }
 }
