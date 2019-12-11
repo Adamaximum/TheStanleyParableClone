@@ -9,9 +9,13 @@ public class JumpToEnding : MonoBehaviour
 {
     public string cheatCode;
 
+    public Transform[] cheatLocations;
+
     // Start is called before the first frame update
     void Start()
     {
+
+
         if (Input.GetKeyDown(KeyCode.R))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -19,17 +23,17 @@ public class JumpToEnding : MonoBehaviour
 
         if (cheatCode == "Insane")
         {
-            transform.position = new Vector3(45f, -5.84f, 71.2f);
+            transform.position = new Vector3(cheatLocations[0].position.x, cheatLocations[0].position.y, cheatLocations[0].position.z);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 180, transform.localEulerAngles.z);
         }
         if (cheatCode == "Elevator")
         {
-            transform.position = new Vector3(60.18f, transform.position.y, 20.625f);
+            transform.position = new Vector3(cheatLocations[1].position.x, cheatLocations[1].position.y, cheatLocations[1].position.z);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
         }
         if (cheatCode == "RedBlue")
         {
-            transform.position = new Vector3(58.26f, -9.28f, 35.6f);
+            transform.position = new Vector3(cheatLocations[2].position.x, cheatLocations[2].position.y, cheatLocations[2].position.z);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
         }
     }
