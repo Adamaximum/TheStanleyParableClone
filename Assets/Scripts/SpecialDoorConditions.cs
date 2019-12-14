@@ -6,10 +6,15 @@ using UnityEngine;
 // PURPOSE: apply special conditions to certain triggers when colliding with them
 public class SpecialDoorConditions : MonoBehaviour
 {
+    public DialogueManager manager;
+
+    [Header("Left Door")]
     public GameObject leftDoorTrigger;
 
+    [Header("Mariella Ending")]
     public EventTrigger lastTrigger;
 
+    [Header("Apartment Ending")]
     public Transform[] teleportDestination;
     public int teleportNumber;
 

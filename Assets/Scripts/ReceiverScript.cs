@@ -12,9 +12,9 @@ public class ReceiverScript : MonoBehaviour
     public bool isActivated;
     private bool played = false;
 
-
     [Header("ELEVATOR STUFFS")]
     public GameObject elevator; // the elevator
+    public ElevatorDoor[] elevatorDoors;
 
     void Start() {
         isActivated = false;
@@ -27,6 +27,10 @@ public class ReceiverScript : MonoBehaviour
         if (isActivated && !played) {
             // [[[[[THIS OBJECT'S CUSTOM CODE STARTS HERE]]]]]
             elevator.GetComponent<elevatorScript>().MoveDown();
+            for (int i = 0; i < elevatorDoors.Length; i++)
+            {
+                elevatorDoors[i].doorOpen = false;
+            }
             //
             Debug.Log("Button is Activated. Commence code now!");
             activatedSource.PlayOneShot(activatedSource.clip);
