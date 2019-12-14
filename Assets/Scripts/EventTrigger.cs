@@ -13,6 +13,9 @@ public class EventTrigger : MonoBehaviour
     public AudioClip[] voiceOverLines;
     public DoorState[] doors;
 
+
+    public ElevatorDoor[] elevatorDoors;
+
     public bool triggered;
     
     [Header ("Player Effects")]
@@ -122,6 +125,18 @@ public class EventTrigger : MonoBehaviour
                 }
             }
         }
+
+        if (gameObject.tag == "TriggerElevator")
+        {
+            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
+            {
+                for (int i = 0; i < elevatorDoors.Length; i++)
+                {
+                    elevatorDoors[i].doorOpen = !elevatorDoors[i].doorOpen;
+                }
+                Destroy(this.gameObject);
+            }
+        }
     }
 
     private void OnTriggerEnter(Collider other)
@@ -146,7 +161,7 @@ public class EventTrigger : MonoBehaviour
                 manager.currentTrigger = this.gameObject; // Adds the new trigger
             }
 
-            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRightDoor")
+            if (gameObject.tag == "TriggerNormal" || gameObject.tag == "TriggerRightDoor" || gameObject.tag == "TriggerElevator")
             {
                 for (int i = 0; i < doors.Length; i++)
                 {
