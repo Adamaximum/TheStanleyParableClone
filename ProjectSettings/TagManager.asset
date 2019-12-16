@@ -14,6 +14,7 @@ TagManager:
   - TriggerTeleport
   - TriggerRedDoor
   - InElevator
+  - TriggerElevator
   layers:
   - Default
   - TransparentFX
