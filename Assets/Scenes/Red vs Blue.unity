@@ -403,7 +403,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79160
+  m_Name: pb_Mesh-47856
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -729,7 +729,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79420
+  m_Name: pb_Mesh-48120
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -892,7 +892,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79026
+  m_Name: pb_Mesh-47718
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1056,6 +1056,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739793786}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Enter Door 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -1140,11 +1145,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Enter Door 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -1528,7 +1528,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79126
+  m_Name: pb_Mesh-47822
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -2132,6 +2132,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (6)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -2186,11 +2191,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (6)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -2490,6 +2490,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739793786}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Door 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -2574,11 +2579,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Red Door 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -2850,7 +2850,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78950
+  m_Name: pb_Mesh-47642
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3182,7 +3182,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79426
+  m_Name: pb_Mesh-48130
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -3903,7 +3903,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79096
+  m_Name: pb_Mesh-47792
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -4436,7 +4436,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78966
+  m_Name: pb_Mesh-47658
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -5389,6 +5389,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (1)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5444,11 +5449,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_Material
@@ -5470,6 +5470,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1321762561}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Enter Door 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -5554,11 +5559,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Enter Door 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -6486,7 +6486,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79412
+  m_Name: pb_Mesh-48108
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -6998,7 +6998,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79164
+  m_Name: pb_Mesh-47860
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7256,7 +7256,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79076
+  m_Name: pb_Mesh-47772
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -7605,7 +7605,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79162
+  m_Name: pb_Mesh-47858
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8006,7 +8006,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79418
+  m_Name: pb_Mesh-48118
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -8681,7 +8681,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79034
+  m_Name: pb_Mesh-47730
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9029,6 +9029,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1007140633}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Door 3
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -9113,11 +9118,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Red Door 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -9226,7 +9226,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78868
+  m_Name: pb_Mesh-47544
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -9766,7 +9766,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78234
+  m_Name: pb_Mesh-46892
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10485,7 +10485,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79134
+  m_Name: pb_Mesh-47830
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -10648,7 +10648,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79124
+  m_Name: pb_Mesh-47820
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11140,7 +11140,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78232
+  m_Name: pb_Mesh-46890
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11303,7 +11303,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78908
+  m_Name: pb_Mesh-47592
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11467,6 +11467,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11521,11 +11526,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (4)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -11832,7 +11832,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78912
+  m_Name: pb_Mesh-47596
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -11995,7 +11995,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78340
+  m_Name: pb_Mesh-46998
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13122,7 +13122,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79436
+  m_Name: pb_Mesh-48148
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -13903,7 +13903,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78956
+  m_Name: pb_Mesh-47648
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14422,6 +14422,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (7)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -14477,11 +14482,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (7)
-      objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_Material
@@ -14502,7 +14502,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79414
+  m_Name: pb_Mesh-48110
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -14666,6 +14666,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1321762561}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Door 1-2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -14751,11 +14756,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.0415
       objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Red Door 1-2
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
 --- !u!43 &940193410
@@ -14764,7 +14764,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78894
+  m_Name: pb_Mesh-47574
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15607,7 +15607,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78866
+  m_Name: pb_Mesh-47542
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -15771,6 +15771,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (9)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -15825,11 +15830,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (9)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -16037,7 +16037,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79024
+  m_Name: pb_Mesh-47716
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16200,7 +16200,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78864
+  m_Name: pb_Mesh-47540
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16363,7 +16363,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79010
+  m_Name: pb_Mesh-47702
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -16878,6 +16878,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1321762561}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Door 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -16963,11 +16968,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 5.0415
       objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Red Door 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
 --- !u!43 &1090188439
@@ -16976,7 +16976,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79006
+  m_Name: pb_Mesh-47698
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17325,7 +17325,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78898
+  m_Name: pb_Mesh-47578
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -17489,6 +17489,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739793786}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Door 2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -17573,11 +17578,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Door 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -18076,6 +18076,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (3)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18130,11 +18135,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (3)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -18439,7 +18439,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78914
+  m_Name: pb_Mesh-47598
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -18698,6 +18698,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (8)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -18752,11 +18757,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (8)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -18966,7 +18966,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79166
+  m_Name: pb_Mesh-47862
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19222,7 +19222,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79122
+  m_Name: pb_Mesh-47818
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19385,7 +19385,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79114
+  m_Name: pb_Mesh-47810
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19548,7 +19548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79434
+  m_Name: pb_Mesh-48146
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -19711,7 +19711,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79080
+  m_Name: pb_Mesh-47776
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20335,7 +20335,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79448
+  m_Name: pb_Mesh-48160
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -20775,7 +20775,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79102
+  m_Name: pb_Mesh-47798
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -21796,6 +21796,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (2)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -21850,11 +21855,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (2)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -22064,7 +22064,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78974
+  m_Name: pb_Mesh-47666
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22227,7 +22227,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79136
+  m_Name: pb_Mesh-47832
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -22839,7 +22839,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79456
+  m_Name: pb_Mesh-48168
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23241,11 +23241,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: elevator
       objectReference: {fileID: 0}
-    - target: {fileID: -5102530947620581811, guid: 80fb652c02d2b8943b42c8396cca05d3,
-        type: 3}
-      propertyPath: m_TagString
-      value: Interactable
-      objectReference: {fileID: 0}
     - target: {fileID: -6434590018773005939, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -23321,21 +23316,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.25
       objectReference: {fileID: 0}
-    - target: {fileID: 254038723874674466, guid: 80fb652c02d2b8943b42c8396cca05d3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4124705061183524898, guid: 80fb652c02d2b8943b42c8396cca05d3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 9
-      objectReference: {fileID: 0}
-    - target: {fileID: -2052708824910821479, guid: 80fb652c02d2b8943b42c8396cca05d3,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
     - target: {fileID: 2316759328556211283, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
       propertyPath: m_RootOrder
@@ -23356,10 +23336,20 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 254038723874674466, guid: 80fb652c02d2b8943b42c8396cca05d3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 504810068302362455, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
       propertyPath: m_RootOrder
       value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4124705061183524898, guid: 80fb652c02d2b8943b42c8396cca05d3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 1515338714476595349, guid: 80fb652c02d2b8943b42c8396cca05d3,
         type: 3}
@@ -23376,6 +23366,16 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 13
       objectReference: {fileID: 0}
+    - target: {fileID: -2052708824910821479, guid: 80fb652c02d2b8943b42c8396cca05d3,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 12
+      objectReference: {fileID: 0}
+    - target: {fileID: -5102530947620581811, guid: 80fb652c02d2b8943b42c8396cca05d3,
+        type: 3}
+      propertyPath: m_TagString
+      value: Interactable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80fb652c02d2b8943b42c8396cca05d3, type: 3}
 --- !u!43 &1489215835
@@ -23384,7 +23384,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78928
+  m_Name: pb_Mesh-47612
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -23898,7 +23898,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79044
+  m_Name: pb_Mesh-47740
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -24935,6 +24935,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1321762561}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Blue Door 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -25019,11 +25024,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Blue Door 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -25126,7 +25126,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79038
+  m_Name: pb_Mesh-47734
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25429,7 +25429,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79442
+  m_Name: pb_Mesh-48154
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -25685,7 +25685,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78926
+  m_Name: pb_Mesh-47610
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26034,7 +26034,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78888
+  m_Name: pb_Mesh-47564
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -26198,6 +26198,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 739793786}
     m_Modifications:
+    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
+        type: 3}
+      propertyPath: m_Name
+      value: Red Door 2-2
+      objectReference: {fileID: 0}
     - target: {fileID: 3130310662889548822, guid: e9fd70e614685ef498f3b714915e5690,
         type: 3}
       propertyPath: doorOpen
@@ -26282,11 +26287,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 5.0415
-      objectReference: {fileID: 0}
-    - target: {fileID: 3130310662889548820, guid: e9fd70e614685ef498f3b714915e5690,
-        type: 3}
-      propertyPath: m_Name
-      value: Red Door 2-2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9fd70e614685ef498f3b714915e5690, type: 3}
@@ -26653,7 +26653,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78934
+  m_Name: pb_Mesh-47618
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27004,7 +27004,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79030
+  m_Name: pb_Mesh-47722
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27167,7 +27167,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78920
+  m_Name: pb_Mesh-47604
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27330,7 +27330,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79042
+  m_Name: pb_Mesh-47738
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27774,7 +27774,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78980
+  m_Name: pb_Mesh-47672
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -27937,7 +27937,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79022
+  m_Name: pb_Mesh-47714
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28193,7 +28193,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79014
+  m_Name: pb_Mesh-47706
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28449,7 +28449,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78964
+  m_Name: pb_Mesh-47656
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -28705,7 +28705,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79036
+  m_Name: pb_Mesh-47732
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29147,7 +29147,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79422
+  m_Name: pb_Mesh-48122
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29310,7 +29310,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79078
+  m_Name: pb_Mesh-47774
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29473,7 +29473,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79110
+  m_Name: pb_Mesh-47806
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -29799,7 +29799,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79056
+  m_Name: pb_Mesh-47752
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -31563,6 +31563,11 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 656275522}
+    - target: {fileID: 2664329218541526582, guid: 27d6d361a54b399438f7b68d96cf0ff1,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 27d6d361a54b399438f7b68d96cf0ff1, type: 3}
 --- !u!1001 &1963014260
@@ -32137,7 +32142,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78884
+  m_Name: pb_Mesh-47560
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32300,7 +32305,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79046
+  m_Name: pb_Mesh-47742
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32463,7 +32468,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-78924
+  m_Name: pb_Mesh-47608
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -32626,7 +32631,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79440
+  m_Name: pb_Mesh-48152
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33016,6 +33021,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad (5)
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33070,11 +33080,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad (5)
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
@@ -33422,7 +33427,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-79144
+  m_Name: pb_Mesh-47840
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -33708,6 +33713,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1458174650}
     m_Modifications:
+    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
+        type: 3}
+      propertyPath: m_Name
+      value: Quad
+      objectReference: {fileID: 0}
     - target: {fileID: 4413472940073085243, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -33762,11 +33772,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5089258765437326741, guid: 6bf17efae21c318469f31f8ac1af0f23,
-        type: 3}
-      propertyPath: m_Name
-      value: Quad
       objectReference: {fileID: 0}
     - target: {fileID: 3147623661160127686, guid: 6bf17efae21c318469f31f8ac1af0f23,
         type: 3}
