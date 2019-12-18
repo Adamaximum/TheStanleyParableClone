@@ -415,7 +415,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: ba730e051a4e1d640a9375b6a1794662,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: ba730e051a4e1d640a9375b6a1794662,
         type: 3}
@@ -479,7 +479,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a3eb796cdc0bb154fb2df6518dd5b430,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.651
+      value: 2.89
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a3eb796cdc0bb154fb2df6518dd5b430,
         type: 3}
@@ -504,7 +504,7 @@ PrefabInstance:
     - target: {fileID: -4216859302048453862, guid: a3eb796cdc0bb154fb2df6518dd5b430,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: -4216859302048453862, guid: a3eb796cdc0bb154fb2df6518dd5b430,
         type: 3}
@@ -818,7 +818,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
 --- !u!1 &1578012428
 GameObject:
@@ -911,7 +911,7 @@ Transform:
   m_LocalScale: {x: 2.3176, y: 2.3176, z: 2.3176}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1719264713
 GameObject:
@@ -1069,15 +1069,15 @@ MonoBehaviour:
   - She stood there for only a moment, looking down at the body, and then she ran.
   - 
   voiceOverLines:
-  - {fileID: 8300000, guid: f4e7bf63eead613459c0849eadc11a3d, type: 3}
-  - {fileID: 8300000, guid: f0bd25dc0dff5fc4b9295551fc40865a, type: 3}
-  - {fileID: 8300000, guid: f00a5aef437738d408af17635eac6089, type: 3}
-  - {fileID: 8300000, guid: 15409e61eee8118418cdbe34a7d1db18, type: 3}
-  - {fileID: 8300000, guid: 079c93908c7cb8f4292612c0e24f2c3f, type: 3}
-  - {fileID: 8300000, guid: eaed0bb053444644f80b2d959a02b680, type: 3}
-  - {fileID: 8300000, guid: ad64df84f8d065b4ead8d35675d72637, type: 3}
-  - {fileID: 8300000, guid: 905957358666c2f46b89b24f8cfd89c8, type: 3}
-  - {fileID: 8300000, guid: 96bdfb341794dca44a5b21a532536804, type: 3}
+  - {fileID: 8300000, guid: aced1c2aff2837c43af5f9aa8abee8cd, type: 3}
+  - {fileID: 8300000, guid: 22901b6d8fdb48b4f9d51608fbc19b1a, type: 3}
+  - {fileID: 8300000, guid: c3b8d70fb07a6d845ba3788aa86fcc38, type: 3}
+  - {fileID: 8300000, guid: 18d5206addb5f2440a56e667ae26f959, type: 3}
+  - {fileID: 8300000, guid: 8b89c798e94ac2d4390af46ccd6974b2, type: 3}
+  - {fileID: 8300000, guid: 593198a4dfda1644d95e4f388baf4d73, type: 3}
+  - {fileID: 8300000, guid: 73128b836792dac43b4fc82acfc7dfa1, type: 3}
+  - {fileID: 8300000, guid: 67b4dc3c82776144c8b8218b7c5ace67, type: 3}
+  - {fileID: 8300000, guid: 8b8173af9b9d1b647ad5d235c4a403bd, type: 3}
   - {fileID: 8300000, guid: f00a5aef437738d408af17635eac6089, type: 3}
 --- !u!4 &1942900063
 Transform:
@@ -1091,5 +1091,5 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

@@ -138,12 +138,14 @@ public class EventTrigger : MonoBehaviour
                 elevator.movingUp = true;
             }
 
-            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying) // Opens doors at end of second trigger lines
+            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying) // Opens doors at the end of lines
             {
                 for (int i = 0; i < elevatorDoors.Length; i++)
                 {
                     elevatorDoors[i].doorOpen = !elevatorDoors[i].doorOpen;
                 }
+                elevator.elevatorMoveSpd = 0.4f;
+
                 Destroy(this.gameObject); // Destroy the object immediately to prevent it from causing more trouble
             }
         }
