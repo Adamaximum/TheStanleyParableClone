@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/IntroCutscene.unity
+    guid: 8a752a6d9043ec047b1e7bf4d640cee6
+  - enabled: 1
     path: Assets/Scenes/Adam-scene.unity
     guid: 9fc0d4010bbf28b4594072e72b8655ab
   - enabled: 1
