@@ -28,7 +28,10 @@ public class EventTrigger : MonoBehaviour
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
+        if (gameObject.tag == "TriggerElevator")
+        {
+            elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
+        }
 
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
         mouseLook = GameObject.Find("Main Camera").GetComponent<MouseLook>();

@@ -8,6 +8,7 @@ public class IntroCutscene : MonoBehaviour
     public SpriteRenderer blackout;
 
     public bool fadeIn;
+    public int movementPhases;
 
     // Start is called before the first frame update
     void Start()
@@ -15,35 +16,80 @@ public class IntroCutscene : MonoBehaviour
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
         blackout = GetComponentInChildren<SpriteRenderer>();
 
-        StartCoroutine(CameraPath());
+        //StartCoroutine(CameraPath());
     }
 
     // Update is called once per frame
     void Update()
     {
-        //if (manager.currentLine == 2)
+        //if (fadeIn)
         //{
         //    blackout.color -= new Color(0, 0, 0, 0.005f);
         //}
+        //else
+        //{
+        //    blackout.color += new Color(0, 0, 0, 0.005f);
+        //}
 
-        if (fadeIn)
+        if (manager.currentLine == 3)
         {
-            blackout.color -= new Color(0, 0, 0, 0.005f);
+            
+            movementPhases = 1;
         }
-        else
+
+        if (movementPhases == 1)
         {
-            blackout.color += new Color(0, 0, 0, 0.005f);
+            transform.position -= new Vector3(0.004f, 0f, 0f);
+
+            if (transform.position.x > 6.8f)
+            {
+                blackout.color -= new Color(0, 0, 0, 0.01f);
+            }
+            else if (transform.position.x <= 6.8f)
+            {
+                blackout.color += new Color(0, 0, 0, 0.01f);
+            }
         }
+
+        //else if (manager.currentLine == 4)
+        //{
+        //    if (movementPhases == 0)
+        //    {
+        //        blackout.color += new Color(0, 0, 0, 0.005f);
+        //        if (blackout.color.a == 255)
+        //        {
+        //            movementPhases = 1;
+        //        }
+        //    }
+        //    else if (movementPhases == 1)
+        //    {
+        //        blackout.color -= new Color(0, 0, 0, 0.005f);
+        //    }
+        //}
+
+
+
+
     }
 
-    IEnumerator CameraPath()
+    //IEnumerator CameraPath()
+    //{
+    //    yield return new WaitForSeconds(5);
+
+    //    fadeIn = true;
+
+    //    yield return new WaitForSeconds(8);
+
+    //    fadeIn = false;
+    //}
+
+    private void OnTriggerEnter(Collider other)
     {
-        yield return new WaitForSeconds(2);
+        if (other.tag == "TriggerNormal")
+        {
+            
+        }
 
-        fadeIn = true;
-
-        yield return new WaitForSeconds(10);
-
-        fadeIn = false;
+        Debug.Log("Triggered!");
     }
 }
