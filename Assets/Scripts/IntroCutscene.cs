@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+// USAGE: on the Main Camera in the IntroScene
+// PURPOSE: to command the movements (and sometimes fades) of the camera during this scene
 public class IntroCutscene : MonoBehaviour
 {
     public DialogueManager manager;
@@ -17,6 +19,9 @@ public class IntroCutscene : MonoBehaviour
 
     public bool fadeIn;
     public int movementPhases;
+
+    public float speedFast;
+    public float speedSlow;
 
     // Start is called before the first frame update
     void Start()
@@ -37,7 +42,7 @@ public class IntroCutscene : MonoBehaviour
         {
             clickToSkip.color += new Color (0f, 0f, 0f, 0.005f);
         }
-        else if (manager.currentLine == 2)
+        else if (manager.currentLine >= 2)
         {
             clickToSkip.color -= new Color(0f, 0f, 0f, 0.005f);
         }
@@ -52,7 +57,7 @@ public class IntroCutscene : MonoBehaviour
             stanleyPose[0].SetActive(true);
             stanleyPose[1].SetActive(false);
 
-            transform.position -= new Vector3(0.004f, 0f, 0f);
+            transform.position -= new Vector3(speedFast, 0f, 0f) * Time.deltaTime;
 
             blackout.color -= new Color(0, 0, 0, 0.005f);
 
@@ -68,7 +73,7 @@ public class IntroCutscene : MonoBehaviour
             stanleyPose[0].SetActive(false);
             stanleyPose[1].SetActive(true);
 
-            transform.position -= new Vector3(0f, 0f, 0.004f);
+            transform.position -= new Vector3(0f, 0f, speedFast) * Time.deltaTime;
             transform.LookAt(Stanley);
 
             if (transform.position.z < -1.7f)
@@ -82,7 +87,7 @@ public class IntroCutscene : MonoBehaviour
             stanleyPose[0].SetActive(true);
             stanleyPose[1].SetActive(false);
 
-            transform.position += new Vector3(0.004f, 0f, 0f);
+            transform.position += new Vector3(speedFast, 0f, 0f) * Time.deltaTime;
             transform.LookAt(Stanley);
 
             if (transform.position.x > 3f)
@@ -94,7 +99,7 @@ public class IntroCutscene : MonoBehaviour
         }
         else if (movementPhases == 4)
         {
-            transform.position += new Vector3(0.0005f, 0f, 0f);
+            transform.position += new Vector3(speedSlow, 0f, 0f) * Time.deltaTime;
 
             if (transform.position.x > 6.1f)
             {
@@ -109,7 +114,7 @@ public class IntroCutscene : MonoBehaviour
             stanleyPose[1].SetActive(false);
 
             blackout.color = new Color(0f, 0f, 0f, 0f);
-            transform.position += new Vector3(0.0005f, 0f, 0f);
+            transform.position += new Vector3(speedSlow, 0f, 0f) * Time.deltaTime;
             transform.LookAt(Stanley);
         }
 
@@ -127,7 +132,7 @@ public class IntroCutscene : MonoBehaviour
             movementPhases = 5;
         }
 
-        if (manager.currentLine > 15 || Input.GetMouseButtonDown(0))
+        else if (manager.currentLine > 15 || Input.GetMouseButtonDown(0))
         {
             SceneManager.LoadScene(1);
         }
