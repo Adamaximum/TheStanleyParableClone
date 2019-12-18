@@ -41,12 +41,12 @@ public class DialogueManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!source.isPlaying) // Turns off subtitles and panels if no audio is playing
+        if (!source.isPlaying) // Turns off subtitles and panel if no audio is playing
         {
             subtitles.text = "";
             panel.enabled = false;
         }
-        if (subtitles.text == "")
+        if (subtitles.text == "") // Turns off the panel if there are no subtitles
         {
             panel.enabled = false;
         }
@@ -58,8 +58,9 @@ public class DialogueManager : MonoBehaviour
     {
         if (currentLine < voiceOverLines.Count && !source.isPlaying)
         {
-            subtitles.text = subtitleTexts[currentLine];
+            subtitles.text = subtitleTexts[currentLine]; // Subtitle is the current subtitle on the list
 
+            // Adjusts panel length to fit with text
             subtitles.ForceMeshUpdate();
             Vector2 subSize = subtitles.textBounds.size;
             subSize.x = panel.rectTransform.sizeDelta.x;
@@ -67,10 +68,10 @@ public class DialogueManager : MonoBehaviour
             subSize += new Vector2(0f, 1f);
             panel.rectTransform.sizeDelta = subSize;
 
-            source.clip = voiceOverLines[currentLine];
-            source.Play();
+            source.clip = voiceOverLines[currentLine]; // Audio is the current audio on the list
+            source.Play(); // Plays the audio
 
-            currentLine++;
+            currentLine++; // Iterates the current line
         }
     }
 }
