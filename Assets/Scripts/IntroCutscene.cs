@@ -124,7 +124,7 @@ public class IntroCutscene : MonoBehaviour
         }
         if (manager.currentLine >= 11)
         {
-            centerTitle.color -= new Color(0f, 0f, 0f, 0.005f);
+            centerTitle.color = new Color(0f, 0f, 0f, 0f);
         }
         if (manager.currentLine == 11 && movementPhases == 4)
         {

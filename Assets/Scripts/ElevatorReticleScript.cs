@@ -13,7 +13,7 @@ public class ElevatorReticleScript : MonoBehaviour
 
     void Start() {
         reticleText.SetActive(false);
-        Debug.Log(reticleTrigger.tag);
+        //Debug.Log(reticleTrigger.tag);
     }
 
     void OnTriggerEnter(Collider col) {
