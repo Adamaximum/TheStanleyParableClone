@@ -17,8 +17,9 @@ public class EventTrigger : MonoBehaviour
     public ElevatorDoor[] elevatorDoors;
 
     public bool triggered;
-    
-    [Header ("Player Effects")]
+
+    [Header("Player Effects")]
+    public Rigidbody playerRB;
     public PlayerMoveScript controls;
     public MouseLook mouseLook;
     public SpriteRenderer filter;
@@ -33,6 +34,7 @@ public class EventTrigger : MonoBehaviour
             elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
         }
 
+        playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
         mouseLook = GameObject.Find("Main Camera").GetComponent<MouseLook>();
         filter = GameObject.Find("Camera Filter").GetComponent<SpriteRenderer>();
@@ -97,6 +99,7 @@ public class EventTrigger : MonoBehaviour
                 filter.color = new Color(0, 0, 0, 255);
                 controls.enabled = false;
                 mouseLook.enabled = false;
+                playerRB.velocity = new Vector2(0f, 0f);
 
                 if (!manager.source.isPlaying)
                 {
@@ -200,5 +203,6 @@ public class EventTrigger : MonoBehaviour
         filter.color = new Color(0, 0, 0, 255);
         controls.enabled = false;
         mouseLook.enabled = false;
+        playerRB.velocity = new Vector2(0f, 0f);
     }
 }
