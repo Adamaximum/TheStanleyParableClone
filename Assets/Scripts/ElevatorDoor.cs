@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// USAGE: on ElevatorDoor objects
+// PURPOSE: to open (shrink) the elevator doors
 public class ElevatorDoor : MonoBehaviour
 {
     public bool doorOpen;

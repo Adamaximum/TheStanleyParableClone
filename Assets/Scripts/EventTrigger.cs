@@ -28,7 +28,10 @@ public class EventTrigger : MonoBehaviour
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
+        if (gameObject.tag == "TriggerElevator")
+        {
+            elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
+        }
 
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
         mouseLook = GameObject.Find("Main Camera").GetComponent<MouseLook>();
@@ -40,8 +43,8 @@ public class EventTrigger : MonoBehaviour
     {
         if (triggered) // Activates the Dialogue Manager and Special Events (if applicable)
         {
-            manager.PlayVoice();
-            SpecialEventTriggers();
+            manager.PlayVoice(); // Gets the manager to play the audio and display the subtitles
+            SpecialEventTriggers(); // Activates special events (if applicable)
         }
     }
 
@@ -84,7 +87,7 @@ public class EventTrigger : MonoBehaviour
                     }
                 }
 
-                if (filter.color.a < 190)
+                if (filter.color.a < 190) // Red filter begins fading in
                 {
                     filter.color += new Color(0, 0, 0, 0.00035f);
                 }
@@ -102,7 +105,7 @@ public class EventTrigger : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "TriggerRedDoor")
+        if (gameObject.tag == "TriggerRedDoor") // Blacks out the camera after a delay, then transitions
         {
             doors[0].doorOpen = false;
 
@@ -113,11 +116,11 @@ public class EventTrigger : MonoBehaviour
                 Debug.Log("Red is closed!");
             }
 
-            if (manager.currentLine == 3)
+            if (manager.currentLine == 3) // Fades in the title card
             {
                 manager.centerTitle.color += new Color(0, 0, 0, 0.008f);
             }
-            if (manager.currentLine == 4 && !manager.source.isPlaying)
+            if (manager.currentLine == 4 && !manager.source.isPlaying) // Fades out
             {
                 manager.centerTitle.color -= new Color(0, 0, 0, 0.008f);
 
@@ -128,20 +131,22 @@ public class EventTrigger : MonoBehaviour
             }
         }
 
-        if (gameObject.tag == "TriggerElevator")
+        if (gameObject.tag == "TriggerElevator") // Moves the elevator and times opening of the doors
         {
-            if (manager.currentLine == 3 && subtitleTexts.Length == 4)
+            if (manager.currentLine == 3 && subtitleTexts.Length == 4) // The first trigger moves the elevator up
             {
                 elevator.movingUp = true;
             }
 
-            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying)
+            if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying) // Opens doors at the end of lines
             {
                 for (int i = 0; i < elevatorDoors.Length; i++)
                 {
                     elevatorDoors[i].doorOpen = !elevatorDoors[i].doorOpen;
                 }
-                Destroy(this.gameObject);
+                elevator.elevatorMoveSpd = 0.4f;
+
+                Destroy(this.gameObject); // Destroy the object immediately to prevent it from causing more trouble
             }
         }
     }

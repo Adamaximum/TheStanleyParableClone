@@ -34,12 +34,11 @@ public class SpecialDoorConditions : MonoBehaviour
             lastTrigger = other.gameObject.GetComponent<EventTrigger>();
         }
 
-        if (other.gameObject.tag == "TriggerTeleport")
+        if (other.gameObject.tag == "TriggerTeleport") // Teleports the player based on the trigger they hit
         {
             transform.position = new Vector3 (teleportDestination[teleportNumber].position.x, 
                 teleportDestination[teleportNumber].position.y, teleportDestination[teleportNumber].position.z);
             transform.localEulerAngles = new Vector3(transform.localEulerAngles.x, 90, transform.localEulerAngles.z);
-            //gameObject.GetComponent<Rigidbody>().velocity = new Vector3(0, 0, 0);
             teleportNumber++;
         }
     }

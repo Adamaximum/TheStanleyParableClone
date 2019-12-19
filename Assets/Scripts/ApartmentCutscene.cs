@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
 
+// USAGE: on the DialogueManager of the ApartmentEnding scene
+// PURPOSE: to display timed onscreen text (and later display credits)
 public class ApartmentCutscene : MonoBehaviour
 {
     public DialogueManager manager;
