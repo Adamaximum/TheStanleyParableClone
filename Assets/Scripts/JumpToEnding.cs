@@ -14,11 +14,9 @@ public class JumpToEnding : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
-
         if (Input.GetKeyDown(KeyCode.R))
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadScene(0);
         }
 
         if (cheatCode == "Insane")

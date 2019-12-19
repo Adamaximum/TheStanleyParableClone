@@ -31,7 +31,7 @@ public class MariellaCutscene : MonoBehaviour
     {
         if (manager.currentLine > 2) // Camera begins rising
         {
-            transform.localPosition += new Vector3(0, 0.002f, 0);
+            transform.localPosition += new Vector3(0, 0.1f, 0) * Time.deltaTime;
         }
 
         if (manager.currentLine > 2 && manager.currentLine < 9) // Camera fades in

@@ -34,9 +34,8 @@ public class InteractionScript : MonoBehaviour {
                 hitObject = hit.collider.gameObject;
                 if (hitObject.tag == "Interactable") { //if hit object is interactable...
                     Debug.Log("Interactable!"); //...then this code is run
-                    //what this part should do is "Activate" code from the other object
-                    hitObject.GetComponent<ReceiverScript>().isActivated = true;
-
+                                                //what this part should do is "Activate" code from the other object
+                        hitObject.GetComponent<ReceiverScript>().isActivated = true;
 
                 } else {
                     errorSource.PlayOneShot(errorSound); //if hit object is not interactable, an error sound plays
