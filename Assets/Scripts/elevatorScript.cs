@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class elevatorScript : MonoBehaviour
+public class ElevatorScript : MonoBehaviour
 {
     public bool movingDown = false; // indicate if the elevator is moving
     public bool movingUp = false;
