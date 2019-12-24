@@ -23,7 +23,6 @@ public class ElevatorScript : MonoBehaviour
         if (movingDown){
             elevatorPos.y -= elevatorMoveSpd * Time.deltaTime; // if moving is true, decrease
             transform.position = elevatorPos; // change elevator actual position
-            Debug.Log("Elevator is now moving down!");
         }
         if (movingDown && transform.position.y <= elevatorYDestinationDown){ // if elevator is lower or equal to desired y position
             movingDown = false; // stop moving down
@@ -32,14 +31,11 @@ public class ElevatorScript : MonoBehaviour
         if (movingUp){
             elevatorPos.y += elevatorMoveSpd * Time.deltaTime; // go up
             transform.position = elevatorPos; // actually go up
-            Debug.Log("Elevator is now moving up!");
         }
 
         if (movingUp && transform.position.y >= elevatorYDestinationUp){ // if elevator is above or equal to the desired y position
             movingUp = false; // stop moving up
         }
-
-        Debug.Log("The ElevatorScript is running!");
     }
 
     public void MoveUp(){

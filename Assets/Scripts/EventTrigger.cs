@@ -29,7 +29,7 @@ public class EventTrigger : MonoBehaviour
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        elevator = GameObject.Find("Elevator").GetComponent<ElevatorScript>();
+        //elevator = GameObject.Find("Elevator").GetComponent<ElevatorScript>();
 
         playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
