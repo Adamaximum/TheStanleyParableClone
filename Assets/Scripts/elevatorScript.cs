@@ -9,7 +9,7 @@ public class ElevatorScript : MonoBehaviour
     private Vector3 elevatorPos; // to store the elevator's position
     public float elevatorYDestinationDown; // the y axis of destination for the elevator to go down
     public float elevatorMoveSpd;
-    public float elevatorYDestinationUp; // the y axis of detination for the elevator to go up
+    public float elevatorYDestinationUp; // the y axis of destination for the elevator to go up
 
     // Start is called before the first frame update
     void Start()
@@ -23,6 +23,7 @@ public class ElevatorScript : MonoBehaviour
         if (movingDown){
             elevatorPos.y -= elevatorMoveSpd * Time.deltaTime; // if moving is true, decrease
             transform.position = elevatorPos; // change elevator actual position
+            Debug.Log("Elevator is now moving down!");
         }
         if (movingDown && transform.position.y <= elevatorYDestinationDown){ // if elevator is lower or equal to desired y position
             movingDown = false; // stop moving down
@@ -31,11 +32,14 @@ public class ElevatorScript : MonoBehaviour
         if (movingUp){
             elevatorPos.y += elevatorMoveSpd * Time.deltaTime; // go up
             transform.position = elevatorPos; // actually go up
+            Debug.Log("Elevator is now moving up!");
         }
 
         if (movingUp && transform.position.y >= elevatorYDestinationUp){ // if elevator is above or equal to the desired y position
             movingUp = false; // stop moving up
         }
+
+        Debug.Log("The ElevatorScript is running!");
     }
 
     public void MoveUp(){
