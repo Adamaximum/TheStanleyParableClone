@@ -13,7 +13,7 @@ public class EventTrigger : MonoBehaviour
     public AudioClip[] voiceOverLines;
     public DoorState[] doors;
 
-    ElevatorScript elevator;
+    public ElevatorScript elevator;
     public ElevatorDoor[] elevatorDoors;
 
     public bool triggered;
@@ -29,10 +29,7 @@ public class EventTrigger : MonoBehaviour
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        if (gameObject.tag == "TriggerElevator")
-        {
-            elevator = GameObject.Find("Elevator").GetComponent<ElevatorScript>();
-        }
+        elevator = GameObject.Find("Elevator").GetComponent<ElevatorScript>();
 
         playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();
@@ -139,7 +136,6 @@ public class EventTrigger : MonoBehaviour
             if (manager.currentLine == 3 && subtitleTexts.Length == 4) // The first trigger moves the elevator up
             {
                 elevator.movingUp = true;
-                Debug.Log("Elevator is moving up!");
             }
 
             if (manager.currentLine == subtitleTexts.Length && !manager.source.isPlaying) // Opens doors at the end of lines
