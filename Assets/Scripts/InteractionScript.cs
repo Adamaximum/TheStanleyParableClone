@@ -7,6 +7,8 @@ using UnityEngine;
 // FUNCTION: Allow the player to interact with "Interactable" objects while playing an error sound when the object is not "Interactable."
 public class InteractionScript : MonoBehaviour {
 
+    public Transform reticle;
+
     public AudioSource errorSource;
     public AudioClip errorSound;
     GameObject hitObject;
@@ -15,15 +17,18 @@ public class InteractionScript : MonoBehaviour {
     //bool hitObjectBool = false;
 
     void Start()  {
+
+        reticle = GameObject.Find("Reticle").GetComponent<Transform>();
+
         errorSource.GetComponent<AudioSource>();
         errorSource.clip = errorSound;
     }
 
     void Update() {
         //cast a ray from the camera to mouse position on screen (** WHICH SHOULD BE LOCKED TO CENTER OF SCREEN bc of MouseLook **)
-        Ray mouseRay = Camera.main.ScreenPointToRay(Input.mousePosition); 
+        Ray mouseRay = Camera.main.ScreenPointToRay(reticle.position);
 
-        float mouseRayDist = 4.0f; // raycast distance (field of view)
+        float mouseRayDist = 1.0f; // raycast distance (field of view)
 
         RaycastHit hit = new RaycastHit();
 
