@@ -9,7 +9,7 @@ public class ElevatorScript : MonoBehaviour
     private Vector3 elevatorPos; // to store the elevator's position
     public float elevatorYDestinationDown; // the y axis of destination for the elevator to go down
     public float elevatorMoveSpd;
-    public float elevatorYDestinationUp; // the y axis of detination for the elevator to go up
+    public float elevatorYDestinationUp; // the y axis of destination for the elevator to go up
 
     // Start is called before the first frame update
     void Start()
