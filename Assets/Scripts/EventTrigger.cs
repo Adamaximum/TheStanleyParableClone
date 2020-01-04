@@ -13,7 +13,7 @@ public class EventTrigger : MonoBehaviour
     public AudioClip[] voiceOverLines;
     public DoorState[] doors;
 
-    elevatorScript elevator;
+    public ElevatorScript elevator;
     public ElevatorDoor[] elevatorDoors;
 
     public bool triggered;
@@ -29,10 +29,7 @@ public class EventTrigger : MonoBehaviour
     {
         manager = GameObject.Find("DialogueManager").GetComponent<DialogueManager>();
 
-        if (gameObject.tag == "TriggerElevator")
-        {
-            elevator = GameObject.Find("Elevator").GetComponent<elevatorScript>();
-        }
+        //elevator = GameObject.Find("Elevator").GetComponent<ElevatorScript>();
 
         playerRB = GameObject.Find("Player").GetComponent<Rigidbody>();
         controls = GameObject.Find("Player").GetComponent<PlayerMoveScript>();

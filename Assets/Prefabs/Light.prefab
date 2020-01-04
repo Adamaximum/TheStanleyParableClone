@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.28
       objectReference: {fileID: 0}
+    - target: {fileID: -5684868951745258883, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2684987433343351570, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
         type: 3}
       propertyPath: m_CastShadows
@@ -216,11 +221,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 149a06f127874f9438c0198fd3ec42a5, type: 2}
     - target: {fileID: 5573786855188704121, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5684868951745258883, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
         type: 3}
       propertyPath: m_CastShadows
       value: 0
