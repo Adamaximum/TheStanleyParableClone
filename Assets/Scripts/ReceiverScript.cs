@@ -26,7 +26,7 @@ public class ReceiverScript : MonoBehaviour
     {
         if (isActivated && !played) {
             // [[[[[THIS OBJECT'S CUSTOM CODE STARTS HERE]]]]]
-            elevator.GetComponent<elevatorScript>().MoveDown();
+            elevator.GetComponent<ElevatorScript>().MoveDown();
             for (int i = 0; i < elevatorDoors.Length; i++)
             {
                 elevatorDoors[i].doorOpen = false;

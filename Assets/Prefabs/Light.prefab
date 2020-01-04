@@ -48,7 +48,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5708599485047727247
 Transform:
   m_ObjectHideFlags: 0
@@ -116,10 +116,10 @@ Light:
   m_Lightmapping: 1
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1
+  m_BounceIntensity: 0
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 4.5905e-41, y: 0, z: 0, w: -8.2915e-26}
+  m_BoundingSphereOverride: {x: 0.11328125, y: 0.03125, z: 0.02734375, w: -0.03125}
   m_UseBoundingSphereOverride: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
@@ -205,6 +205,11 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 0.28
       objectReference: {fileID: 0}
+    - target: {fileID: -5684868951745258883, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
+        type: 3}
+      propertyPath: m_CastShadows
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: -2684987433343351570, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
         type: 3}
       propertyPath: m_CastShadows
@@ -216,11 +221,6 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2100000, guid: 149a06f127874f9438c0198fd3ec42a5, type: 2}
     - target: {fileID: 5573786855188704121, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
-        type: 3}
-      propertyPath: m_CastShadows
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: -5684868951745258883, guid: 2a4dc6d8d1860f94e848f2ecc8d42671,
         type: 3}
       propertyPath: m_CastShadows
       value: 0

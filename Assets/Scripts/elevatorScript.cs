@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class elevatorScript : MonoBehaviour
+public class ElevatorScript : MonoBehaviour
 {
     public bool movingDown = false; // indicate if the elevator is moving
     public bool movingUp = false;
@@ -15,6 +15,7 @@ public class elevatorScript : MonoBehaviour
     void Start()
     {
         elevatorPos = transform.position; // store elevator position to elevatorPos
+        //Debug.Log(elevatorYDestinationUp);
     }
 
     // Update is called once per frame
@@ -29,13 +30,16 @@ public class elevatorScript : MonoBehaviour
         }
 
         if (movingUp){
+            //Debug.Log("Elevator at " + transform.position.y);
             elevatorPos.y += elevatorMoveSpd * Time.deltaTime; // go up
             transform.position = elevatorPos; // actually go up
         }
 
         if (movingUp && transform.position.y >= elevatorYDestinationUp){ // if elevator is above or equal to the desired y position
             movingUp = false; // stop moving up
+            //Debug.Log("Elevator at up height!");
         }
+        //Debug.Log(movingUp);
     }
 
     public void MoveUp(){
